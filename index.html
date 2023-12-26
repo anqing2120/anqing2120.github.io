@@ -28,479 +28,875 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Growing</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/12/26/ML-learning/">ML_learning</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-12-26</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-12-26</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h2 id="Approaching-Almost-Any-Machine-Learning-Problem"   >
-          <a href="#Approaching-Almost-Any-Machine-Learning-Problem" class="heading-link"><i class="fas fa-link"></i></a><a href="#Approaching-Almost-Any-Machine-Learning-Problem" class="headerlink" title="Approaching (Almost) Any Machine Learning Problem"></a>Approaching (Almost) Any Machine Learning Problem</h2>
-      <blockquote>
-<p>解决几乎所有机器学习问题 很有气势！</p>
-</blockquote>
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Growing</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/12/26/6%E7%94%B7%E6%80%A7%E5%81%A5%E5%BA%B7/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-12-26</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-12-27</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="【经文】"   >
+          <a href="#【经文】" class="heading-link"><i class="fas fa-link"></i></a><a href="#【经文】" class="headerlink" title="【经文】"></a>【经文】</h2>
+      <p>丈夫八岁，肾气实，发长齿更。二八，肾气盛，天癸至， 精气溢泻，阴阳和，故能有子。三八，肾气平均，筋骨劲强， 故真牙生而长极。四八，筋骨隆盛，肌肉满壮。五八，肾气 衰，发堕齿槁。六八，阳气衰竭于上，面焦，发鬓颁白。七 八，肝气衰，筋不能动，天癸竭，精少，肾脏衰，形体皆极。 八八，则齿发去</p>
 
-        <h3 id="1-环境"   >
-          <a href="#1-环境" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-环境" class="headerlink" title="1 环境"></a>1 环境</h3>
-      <p>安装环境 要指定Python版本 pip的版本 【很重要】</p>
-<p>安装软件包 使用pip 【conda库不全】</p>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n environment_name python=3.7.6 pip=2.23</span><br></pre></td></tr></table></div></figure>
-
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda env create -f environment.yml # 现有的ML依赖包 网卡就上PyPI上下载 然后 pip install xxxx.whl</span><br></pre></td></tr></table></div></figure>
-
-
-        <h3 id="2-无监督-和-有监督"   >
-          <a href="#2-无监督-和-有监督" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-无监督-和-有监督" class="headerlink" title="2 无监督 和 有监督"></a>2 无监督 和 有监督</h3>
-      <p>有监督，可以确定地知道目标变量。如果目标变量是 一个数（浮点数） 【回归问题，预测房价】 多个组【分类问题，猫和狗区分】。</p>
-<p>无监督，数据集没有明确的目标变量。聚类方法，可以把数据分为 几类【人来判断几个最合适】</p>
-<ul>
-<li>分解技术 如主成分分析 <strong>t-分布随机邻域嵌入（t-SNE）</strong>等找到几个可行的类别</li>
-</ul>
-<blockquote>
-<p>t-SNE（t-Distributed Stochastic Neighbor Embedding)是一种无监督的、随机统计方法。用于<strong>高维数据的嵌入和可视化，降维 筛选有效特征</strong></p>
-<p>t-SNE 工作原理可以分为两个步骤：</p>
-<ol>
-<li><p>高维相似度：在原始高维空间中，每一点对其他所有点的距离可以通过高斯分布来衡量，形成一种概率分布，表示一个点选择其他点作为其邻居的概率。</p>
-</li>
-<li><p>低维相似度：在低维空间中，每一点对其他所有点的距离也可以通过概率分布来衡量，但这个概率分布遵循的是<code>t分布</code>。</p>
-</li>
-</ol>
-<p>t-SNE的目标是使得高维空间和低维空间中的两种概率分布<code>尽可能一致</code>，也就是让相似的对象在低维空间的投影仍然相似。</p>
-<p>在机器学习中用于理解模型的内部工作机制，把人无法理解的高维度关系 ‘<code>尽量无损的</code>’ 移到平面或三维空间来，方便分析。</p>
-</blockquote>
-<p>用无监督方法处理有标签的数据，例子t-SNE 聚类手写数字，可以查看数据有没有明显的聚集趋势【<strong>分类边界</strong>】：</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">在google colab上不用考虑环境配置的问题，下载速度快，依赖包全且新</span></span><br><span class="line"><span class="string">Original file is located at</span></span><br><span class="line"><span class="string">    https://colab.research.google.com/drive/1PsPPT_Cnywzfl_7WXK200yA2-LEYQwZ8</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Commented out IPython magic to ensure Python compatibility.</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> datasets</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> manifold</span><br><span class="line"><span class="comment"># %matplotlib inline</span></span><br><span class="line"></span><br><span class="line">data = datasets.fetch_openml(<span class="string">&#x27;mnist_784&#x27;</span>, version=<span class="number">1</span>, return_X_y=<span class="literal">True</span>)</span><br><span class="line">pixel_values, targets = data <span class="comment"># 把结果 分为图像和标签两部分</span></span><br><span class="line">targets = targets.astype(<span class="built_in">int</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查基本格式</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(pixel_values))</span><br><span class="line"><span class="built_in">print</span>(pixel_values.shape)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看单个图片</span></span><br><span class="line">single_image = pixel_values.iloc[<span class="number">1</span>].to_numpy().reshape(<span class="number">28</span>, <span class="number">28</span>)</span><br><span class="line">plt.imshow(single_image, cmap=<span class="string">&#x27;gray&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 建立一个两维的t-SNE实例</span></span><br><span class="line">tsne = manifold.TSNE(n_components=<span class="number">2</span>, random_state=<span class="number">42</span>) </span><br><span class="line"><span class="comment"># pd格式不支持直接切片语法，需要转换为numpy或tsne.fit_transform(pixel_values.iloc[:3000, :])</span></span><br><span class="line">pixel_values_np = pixel_values.to_numpy()</span><br><span class="line">transformed_data = tsne.fit_transform(pixel_values_np[:<span class="number">3000</span>, :]) <span class="comment"># 降维并拟合</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个包含transformed_data,targets[:3000]的数据框，并把这个数据框的列名分别命名为&quot;x&quot;,&quot;y&quot;和&quot;targets&quot;，</span></span><br><span class="line"><span class="comment"># 然后将&quot;targets&quot;列的数据类型转换成整数类型。</span></span><br><span class="line">tsne_df = pd.DataFrame(np.column_stack((transformed_data, targets[:<span class="number">3000</span>])),</span><br><span class="line">                       columns=[<span class="string">&quot;x&quot;</span>, <span class="string">&quot;y&quot;</span>, <span class="string">&quot;targets&quot;</span>])</span><br><span class="line">tsne_df.loc[:, <span class="string">&quot;targets&quot;</span>] = tsne_df.targets.astype(<span class="built_in">int</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘图，观察聚类效果</span></span><br><span class="line">grid = sns.FacetGrid(tsne_df, hue=<span class="string">&quot;targets&quot;</span>, height=<span class="number">8</span>)</span><br><span class="line">grid.<span class="built_in">map</span>(plt.scatter, <span class="string">&quot;x&quot;</span>, <span class="string">&quot;y&quot;</span>).add_legend()</span><br></pre></td></tr></table></div></figure>
-
-<img src="./ML-learning.assets/手写数字t-SNE聚类.png" alt="手写数字t-SNE聚类" style="zoom:67%;" />
-
-<p>可以观察到，使用t-SNE即使把784维度【像素个数】的图片降维到二维平面，依然能清晰观察到同一种数字靠拢在一起。9和5混在一起正说明两者的相似性。</p>
-
-        <h3 id="3-交叉检验"   >
-          <a href="#3-交叉检验" class="heading-link"><i class="fas fa-link"></i></a><a href="#3-交叉检验" class="headerlink" title="3 交叉检验"></a>3 交叉检验</h3>
-      <p>交叉检验是构建机器学习模型的一个步骤，它帮助模型准确拟合数据，同时避免过拟合。</p>
-<blockquote>
-<p>把k折交叉验证想象成魔术表演。魔术师喜欢纸牌魔术，一堆纸牌（不要大小王，50张）就是数据集。</p>
-<p>第一步，魔术师先纸牌平均分成k份，假如是5折交叉验证，那纸牌被平均地分成5堆，每堆10张。</p>
-<p>接着，魔术开始。他选择4堆纸牌（也就是80%的数据）作为他的”训练集”，用以练习魔术，看看什么样的手法可以让观众最惊讶。剩下那一堆（就是20%的数据）用作”测试集”，在这里他会<strong>真正地</strong>表演他的魔术，看看观众的反应。</p>
-<p>魔术师一共做5次特别的表演。每次，他都会更换一下他的训练集和测试集（也就是把前面已经用过的测试集放回去，再取出另一堆牌作为新的测试集），这样他就可以确保他的所有纸牌都被用到，也就是<strong>所有的数据都有机会被测试</strong>。</p>
-<p>整个过程里，魔术师会记住哪些魔术最令观众惊奇，也就是哪个模型的性能最好。然后，他就会把这个最好的方法，用在他之后的全部魔术表演之中。</p>
-</blockquote>
-<p><strong>过拟合</strong> 随着不断训练，训练集和测试集的损失都会减少。但是，在某个时刻，测试的损失会达到<code>最小值</code>，之后，即使训练损失进一步减少，测试的损失却开始增大。</p>
-<blockquote>
-<p>注: 测试的损失 指向 在实际生产环境中的损失。因为，实际使用的数据 和 测试数据 对模型来说都是第一次见。过犹不及，应追求在测试集上损失最小 而不是训练集上的损失最小，毕竟模型是要拿出去用的，不是放在家里展览的。</p>
-</blockquote>
-<img src="./ML-learning.assets/过拟合.png" alt="过拟合" style="zoom: 67%;" />
-
-
-
-<p>例子，红酒质量数据，以下是对决策树单次训练的结果【训练集准度，测试集准度】：</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 手动下载数据并解压 https://archive.ics.uci.edu/dataset/186/wine+quality、</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="comment"># csv 默认是逗号，但是这里是分号，需要显式指明</span></span><br><span class="line">df = pd.read_csv(<span class="string">&quot;/content/drive/MyDrive/AnyML/winequality-red.csv&quot;</span>,sep=<span class="string">&quot;;&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(df.columns) <span class="comment"># 检查列名</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 一个映射字典，用于将质量值从 0 到 5 进行映射</span></span><br><span class="line">quality_mapping = &#123;</span><br><span class="line"> <span class="number">3</span>: <span class="number">0</span>,</span><br><span class="line"> <span class="number">4</span>: <span class="number">1</span>,</span><br><span class="line"> <span class="number">5</span>: <span class="number">2</span>,</span><br><span class="line"> <span class="number">6</span>: <span class="number">3</span>,</span><br><span class="line"> <span class="number">7</span>: <span class="number">4</span>,</span><br><span class="line"> <span class="number">8</span>: <span class="number">5</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可使用 pandas 的 map 函数以及任何字典，来转换给定列中的值为字典中的值</span></span><br><span class="line">df.loc[:, <span class="string">&quot;quality&quot;</span>] = df.quality.<span class="built_in">map</span>(quality_mapping)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打乱df的行顺序并重新设置连续的索引</span></span><br><span class="line">df = df.sample(frac=<span class="number">1</span>).reset_index(drop=<span class="literal">True</span>) <span class="comment"># frac 采样占比</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 选取前 1000 行作为训练数据</span></span><br><span class="line">df_train = df.head(<span class="number">1000</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 选取最后的 599 行作为测试/验证数据</span></span><br><span class="line">df_test = df.tail(<span class="number">599</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从 scikit-learn 导入需要的模块</span></span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> tree</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> metrics</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化一个决策树分类器，设置最大深度为 3</span></span><br><span class="line">clf = tree.DecisionTreeClassifier(max_depth=<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 选择想要训练模型的列作为模型的特征</span></span><br><span class="line">cols = [<span class="string">&#x27;fixed acidity&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;volatile acidity&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;citric acid&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;residual sugar&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;chlorides&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;free sulfur dioxide&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;total sulfur dioxide&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;density&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;pH&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;sulphates&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;alcohol&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用之前映射的质量以及提供的特征来训练模型</span></span><br><span class="line">clf.fit(df_train[cols], df_train.quality)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在训练集上生成预测</span></span><br><span class="line">train_predictions = clf.predict(df_train[cols])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在测试集上生成预测</span></span><br><span class="line">test_predictions = clf.predict(df_test[cols])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算训练数据集上预测的准确度</span></span><br><span class="line">train_accuracy = metrics.accuracy_score(</span><br><span class="line"> df_train.quality, train_predictions</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算测试数据集上预测的准确度</span></span><br><span class="line">test_accuracy = metrics.accuracy_score(</span><br><span class="line"> df_test.quality, test_predictions</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(train_accuracy,test_accuracy) <span class="comment">#0.588 0.5659432387312187</span></span><br><span class="line"></span><br></pre></td></tr></table></div></figure>
-
-
-
-<p>继续，对决策树使用<strong>不同的深度</strong>，研究【训练集准度，测试集准度】的变化，注意到末尾的图示，当我不断增大树的深度必然导致过度拟合（决策树的复杂度&gt;&gt;训练数据的所需），测试数据的准度到达顶峰开始下滑。</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 注意：这段代码在 Jupyter 笔记本中编写</span></span><br><span class="line"><span class="comment"># 导入 scikit-learn 的 tree 和 metrics</span></span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> tree</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> metrics</span><br><span class="line"><span class="comment"># 导入 matplotlib 和 seaborn</span></span><br><span class="line"><span class="comment"># 用于绘图</span></span><br><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置全局标签文本的大小</span></span><br><span class="line">matplotlib.rc(<span class="string">&#x27;xtick&#x27;</span>, labelsize=<span class="number">20</span>)</span><br><span class="line">matplotlib.rc(<span class="string">&#x27;ytick&#x27;</span>, labelsize=<span class="number">20</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 确保图表直接在笔记本内显示</span></span><br><span class="line"><span class="comment"># %matplotlib inline</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化用于存储训练和测试准确度的列表</span></span><br><span class="line"><span class="comment"># 我们从 50% 的准确度开始</span></span><br><span class="line">train_accuracies = [<span class="number">0.5</span>]</span><br><span class="line">test_accuracies = [<span class="number">0.5</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 遍历几个不同的树深度值</span></span><br><span class="line"><span class="keyword">for</span> depth <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">25</span>):</span><br><span class="line">    <span class="comment"># 初始化模型</span></span><br><span class="line">    clf = tree.DecisionTreeClassifier(max_depth=depth)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 选择用于训练的列/特征</span></span><br><span class="line">    cols = [</span><br><span class="line">        <span class="string">&#x27;fixed acidity&#x27;</span>, <span class="string">&#x27;volatile acidity&#x27;</span>, <span class="string">&#x27;citric acid&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;residual sugar&#x27;</span>, <span class="string">&#x27;chlorides&#x27;</span>, <span class="string">&#x27;free sulfur dioxide&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;total sulfur dioxide&#x27;</span>, <span class="string">&#x27;density&#x27;</span>, <span class="string">&#x27;pH&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;sulphates&#x27;</span>, <span class="string">&#x27;alcohol&#x27;</span></span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 在给定特征上拟合模型</span></span><br><span class="line">    clf.fit(df_train[cols], df_train.quality)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 创建训练和测试预测</span></span><br><span class="line">    train_predictions = clf.predict(df_train[cols])</span><br><span class="line">    test_predictions = clf.predict(df_test[cols])</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 计算训练和测试准确度</span></span><br><span class="line">    train_accuracy = metrics.accuracy_score(</span><br><span class="line">        df_train.quality, train_predictions</span><br><span class="line">    )</span><br><span class="line">    test_accuracy = metrics.accuracy_score(</span><br><span class="line">        df_test.quality, test_predictions</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 添加准确度到列表</span></span><br><span class="line">    train_accuracies.append(train_accuracy)</span><br><span class="line">    test_accuracies.append(test_accuracy)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 matplotlib 和 seaborn 创建两个图</span></span><br><span class="line">plt.figure(figsize=(<span class="number">10</span>, <span class="number">5</span>))</span><br><span class="line">sns.set_style(<span class="string">&quot;whitegrid&quot;</span>)</span><br><span class="line">plt.plot(train_accuracies, label=<span class="string">&quot;train accuracy&quot;</span>)</span><br><span class="line">plt.plot(test_accuracies, label=<span class="string">&quot;test accuracy&quot;</span>)</span><br><span class="line">plt.legend(loc=<span class="string">&quot;upper left&quot;</span>, prop=&#123;<span class="string">&#x27;size&#x27;</span>: <span class="number">15</span>&#125;)</span><br><span class="line">plt.xticks(<span class="built_in">range</span>(<span class="number">0</span>, <span class="number">26</span>, <span class="number">5</span>))</span><br><span class="line">plt.xlabel(<span class="string">&quot;max_depth&quot;</span>, size=<span class="number">20</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;accuracy&quot;</span>, size=<span class="number">20</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></div></figure>
-
-<p><img src="/./ML-learning.assets/%E8%BF%87%E6%8B%9F%E5%90%88-1700019734922-3.png" alt="过拟合"></p>
-<blockquote>
-<p>注：以上可见 选择决策树深度为6或7是合适的，之后虽然训练集精度不断提升，但测试的结果不升反降，这就是过拟合。当然这个结果和你选择特征的质量 数量直接相关。</p>
-</blockquote>
-<p>奥卡姆剃刀，简单说，就是不要试图把可以用简单得多的方法解决的事情复杂化。<code>如无必要，勿增实体</code>，这个原则被用在理论选择中，当有多个可以解释某个现象的理论存在时，应优先选择最简单（即需假设最少的）那一种。</p>
-<p>交叉验证中<code>每一份都会被当成训练集，也会被当成测试集</code>，以此来降低<code>偶然切分</code>导致的误判。</p>
-<ul>
-<li><p>k 折交叉检验 小规模【小于100万】 回归问题 python代码 <code>num_bins = int(np.floor(1 + np.log2(len(data))))</code><br>$$<br>k &#x3D; log_2(N)+1<br>$$</p>
-</li>
-<li><p>分层k折交叉检验  是<strong>标准分类</strong>问题，就盲目选择分层 k 折交叉检验</p>
-</li>
-<li><p><strong>暂留交叉检验</strong>（<strong>hold-out set</strong>） 应对大量的数据，模型推理【训练过程】是一个耗时的过程时 只保留一份用于测试</p>
-</li>
-<li><p>留一交叉检验</p>
-</li>
-<li><p>分组 k 折交叉检验</p>
-</li>
-</ul>
-<p>除了分层 k 折交叉检验之外，我们可以在<strong>回归问题</strong>上使用上述所有交叉检验技术。</p>
-<p>例1，<strong>k折交叉验证</strong>的简单例子，目标添加一个新的列kfold，记录每行数据属于哪一个折<code>(0~k-1)</code>：</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入 pandas 和 scikit-learn 的 model_selection 模块</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> model_selection</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    df = pd.read_csv(<span class="string">&quot;train.csv&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 我们创建一个名为 kfold 的新列，并用 -1 填充</span></span><br><span class="line">    df[<span class="string">&quot;kfold&quot;</span>] = -<span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 接下来的步骤是随机打乱数据的行</span></span><br><span class="line">    df = df.sample(frac=<span class="number">1</span>).reset_index(drop=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 从 model_selection 模块初始化 kfold 类</span></span><br><span class="line">    kf = model_selection.KFold(n_splits=<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 填充新的 kfold 列（enumerate的作用是返回一个迭代器）</span></span><br><span class="line">    <span class="keyword">for</span> fold, (trn_, val_) <span class="keyword">in</span> <span class="built_in">enumerate</span>(kf.split(X=df)):</span><br><span class="line">        df.loc[val_, <span class="string">&#x27;kfold&#x27;</span>] = fold</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 保存带有 kfold 列的新 CSV 文件</span></span><br><span class="line">    df.to_csv(<span class="string">&quot;train_folds.csv&quot;</span>, index=<span class="literal">False</span>)</span><br></pre></td></tr></table></div></figure>
-
-<blockquote>
-<p>注：拿扑克牌举例，首先洗牌，平均切分为<code>五</code>份【之间互不相连】，每一份加入一个标签（<code>0 1 2 3 4</code>），每次留一份做验证。</p>
-</blockquote>
-<p>例2：<strong>分层 k 折交叉检验</strong>，面对偏斜的二元分类数据集，正样本90%，负样本只占 10%，那么你就不应该使用随机 k 折交叉。只需将 model_selection.KFold 更改为 model_selection.StratifiedKFold ，并在 kf.split(…) 函数中指定要分层的目标列。我们假设 CSV 数据集有一列名为 “target”[<strong>即标签值</strong>] ，并且是一个分类问题。</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入 pandas 和 scikit-learn 的 model_selection 模块</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> model_selection</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="comment"># 训练数据保存在名为 train.csv 的 CSV 文件中</span></span><br><span class="line">    df = pd.read_csv(<span class="string">&quot;train.csv&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 添加一个新列 kfold，并用 -1 初始化</span></span><br><span class="line">    df[<span class="string">&quot;kfold&quot;</span>] = -<span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 随机打乱数据行</span></span><br><span class="line">    df = df.sample(frac=<span class="number">1</span>).reset_index(drop=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取目标变量</span></span><br><span class="line">    y = df.target.values</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 初始化 StratifiedKFold 类，设置折数（folds）为 5</span></span><br><span class="line">    kf = model_selection.StratifiedKFold(n_splits=<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 使用 StratifiedKFold 对象的 split 方法来获取训练和验证索引</span></span><br><span class="line">    <span class="keyword">for</span> f, (t_, v_) <span class="keyword">in</span> <span class="built_in">enumerate</span>(kf.split(X=df, y=y)):</span><br><span class="line">        df.loc[v_, <span class="string">&#x27;kfold&#x27;</span>] = f</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 保存包含 kfold 列的新 CSV 文件</span></span><br><span class="line">    df.to_csv(<span class="string">&quot;train_folds.csv&quot;</span>, index=<span class="literal">False</span>)</span><br></pre></td></tr></table></div></figure>
-
-<blockquote>
-<p>注：<code>StratifiedKFold</code>相较于普通的<code>KFold</code>，会保证每一份的数据集的类别分布和整个样本集的类别分布是一样的，这在处理类别不平衡问题时会更有优势。在测试<code>PDF</code>不平衡数据的时候，我就没有考虑分层的情况，可能有一些问题。</p>
-</blockquote>
-<p>例3，回归数据的 分层k折交叉检验 使用Sturge规则计算bins的值</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># stratified-kfold for regression</span></span><br><span class="line"><span class="comment"># 为回归问题进行分层K-折交叉验证</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入需要的库</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> datasets</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> model_selection</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建分折（folds）的函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">create_folds</span>(<span class="params">data</span>):</span><br><span class="line">    <span class="comment"># 创建一个新列叫做kfold，并用-1来填充</span></span><br><span class="line">    data[<span class="string">&quot;kfold&quot;</span>] = -<span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 随机打乱数据的行</span></span><br><span class="line">    data = data.sample(frac=<span class="number">1</span>).reset_index(drop=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 使用Sturge规则计算bin的数量 </span></span><br><span class="line">    num_bins = <span class="built_in">int</span>(np.floor(<span class="number">1</span> + np.log2(<span class="built_in">len</span>(data)))) <span class="comment"># 计算合适的k，而不是人去指定</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 使用pandas的cut函数进行目标变量（target）的分箱</span></span><br><span class="line">    data.loc[:, <span class="string">&quot;bins&quot;</span>] = pd.cut(</span><br><span class="line">        data[<span class="string">&quot;target&quot;</span>], bins=num_bins, labels=<span class="literal">False</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 初始化StratifiedKFold类</span></span><br><span class="line">    kf = model_selection.StratifiedKFold(n_splits=<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 填充新的kfold列</span></span><br><span class="line">    <span class="comment"># 注意：我们使用的是bins而不是实际的目标变量（target）！</span></span><br><span class="line">    <span class="keyword">for</span> f, (t_, v_) <span class="keyword">in</span> <span class="built_in">enumerate</span>(kf.split(X=data, y=data.bins.values)):</span><br><span class="line">        data.loc[v_, <span class="string">&#x27;kfold&#x27;</span>] = f</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 删除bins列</span></span><br><span class="line">    data = data.drop(<span class="string">&quot;bins&quot;</span>, axis=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 返回包含folds的数据</span></span><br><span class="line">    <span class="keyword">return</span> data</span><br><span class="line"></span><br><span class="line"><span class="comment"># 主程序开始</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="comment"># 创建一个带有15000个样本、100个特征和1个目标变量的样本数据集</span></span><br><span class="line">    X, y = datasets.make_regression(</span><br><span class="line">        n_samples=<span class="number">15000</span>, n_features=<span class="number">100</span>, n_targets=<span class="number">1</span></span><br><span class="line">    )</span><br><span class="line">    <span class="comment"># 使用numpy数组创建一个数据框</span></span><br><span class="line">    df = pd.DataFrame(</span><br><span class="line">        X,</span><br><span class="line">        columns=[<span class="string">f&quot;f_<span class="subst">&#123;i&#125;</span>&quot;</span> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(X.shape[<span class="number">1</span>])]</span><br><span class="line">    )</span><br><span class="line">    df.loc[:, <span class="string">&quot;target&quot;</span>] = y</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 创建folds</span></span><br><span class="line">    df = create_folds(df)</span><br></pre></td></tr></table></div></figure>
-
-<blockquote>
-<p>注：bins 目的是把回归问题中连续的（实数）预测值，放到几个桶里（整数），把浮点数预测变成分类问题，然后分层k折。</p>
-</blockquote>
-<p>课后练习：</p>
-<p>假设我们希望建立一个模型，从患者的皮肤图像中检测出皮肤癌。任务是建一个二元分类器，该分类器接收输入图像并预测其良性或恶性的概率。在这类数据集中，训练数据集中<strong>可能有同一患者的多张图像</strong>。因此，要在这里建立一个良好的交叉检验系统，必须有分层的 k 折交叉检验，但也必须确保训练数据中的患者不会出现在验证数据中。幸运的是，scikit-learn 提供了一种称为 GroupKFold 的交叉检验类型。 在这里，患者可以被视为组。 但遗憾的是，scikit-learn 无法将 GroupKFold 与 StratifiedKFold 结合起来。</p>
-<p>如何手动实现呢？</p>
-<p>要手动实plement一个Grouped Stratified K-Fold Cross Validation，需要参考scikit-learn提供的GroupKFold和StratifiedKFold的API。以下是一个可能的步骤：</p>
-<p>步骤如下：</p>
-<ol>
-<li><p>首先，我们对所有数据进行分层，确保每个类在每个折叠中具有相等的比例。 StratifiedKFold 可以实现这个目标。可以使用Scikit-Learn的<code>StratifiedKFold</code>函数来实现，例：</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> StratifiedKFold</span><br><span class="line">skf = StratifiedKFold(n_splits=K, shuffle=<span class="literal">True</span>, random_state=random_state)</span><br></pre></td></tr></table></div></figure>
-</li>
-<li><p>然后，对每个分层后的折叠，我们都遵从 group 的要求，也就是说，一个折叠内的所有样本都来自于同一组（这里的组可以理解为来自同一患者的所有样本）。</p>
-</li>
-<li><p>对于每一个StratifiedKFold的数据分区，我们进一步按照各组ID（即患者ID）进行分组，确保同一个患者的数据不会出现在训练集和验证集的交叉分布。</p>
-</li>
-</ol>
-<p>以下是一个概念上的样例代码：</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> StratifiedKFold</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 假设X是输入数据，y是相应的标签，groups是病人的ID</span></span><br><span class="line">X = ...</span><br><span class="line">y = ...</span><br><span class="line">groups = ...</span><br><span class="line"></span><br><span class="line">strat_kfold = StratifiedKFold(n_splits=K, shuffle=<span class="literal">True</span>, random_state=random_state)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> train_index, test_index <span class="keyword">in</span> strat_kfold.split(X, y):</span><br><span class="line">    train_groups = groups[train_index]</span><br><span class="line">    unique_train_groups = np.unique(train_groups)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 检查在测试集中是否又与训练集中相同的组</span></span><br><span class="line">    overlap = np.isin(groups[test_index], unique_train_groups)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 如果有重叠，我们需要将其调整到与训练集相同的组</span></span><br><span class="line">    <span class="keyword">while</span> np.<span class="built_in">any</span>(overlap):</span><br><span class="line">        <span class="comment"># 从训练集中移除这些组</span></span><br><span class="line">        mask = np.isin(train_groups, groups[test_index][overlap])</span><br><span class="line">        train_index = train_index[~mask]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 并将它们添加到测试集</span></span><br><span class="line">        test_index = np.concatenate([test_index, train_index[mask]])</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 更新组的列表和重叠情况</span></span><br><span class="line">        train_groups = groups[train_index]</span><br><span class="line">        unique_train_groups = np.unique(train_groups)</span><br><span class="line">        overlap = np.isin(groups[test_index], unique_train_groups)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 现在train_index和test_index分别表示了分层且基于组的训练和测试集</span></span><br><span class="line">    X_train, X_test = X[train_index], X[test_index]</span><br><span class="line">    y_train, y_test = y[train_index], y[test_index]</span><br></pre></td></tr></table></div></figure>
-
-<p>这就是所有的步骤。这个方法的主要目标是：对类别进行分层，同时在折叠中维持组的完整性。这使得我们能够在训练和测试模型时大大减少过拟合或漏泄的可能性。</p>
-
-        <h3 id="4-评价指标"   >
-          <a href="#4-评价指标" class="heading-link"><i class="fas fa-link"></i></a><a href="#4-评价指标" class="headerlink" title="4 评价指标"></a>4 评价指标</h3>
-      <ol>
-<li>把手头模型想象为一位”侦探”，任务是找出”坏人”（即恶意文件）：<ol>
-<li>真阳性（True Positive）: 侦探认为某人是坏人，他真的是坏人。也就是说，模型成功地识别出了一个恶意文件。</li>
-<li>假阳性（False Positive）: 侦探认为某人是坏人，但实际上他是好人。模型错误地把一个正常的文件认为是恶意文件。【<strong>误报</strong>】</li>
-<li>真阴性（True Negative）: 侦探认为某人是好人，且他真的是好人。模型成功地识别出了一个非恶意文件。</li>
-<li>假阴性（False Negative）: 侦探认为某人是好人，但实际上他是坏人。模型错误地把一个恶意文件认为是正常文件。【<strong>漏报</strong>】</li>
-</ol>
-</li>
-<li>二元分类指标中，当正负样本数量相等时，我们通常使用准确率、精确率、召回率和 F1。<ol>
-<li>精确率 真阳性&#x2F;（真阳+假阳） 真恶意文件&#x2F;(真恶意+误判恶意) 在所有预测为恶意中，真正找对几个</li>
-<li>Recall率 真阳&#x2F;（真阳+假阴） 真恶意文件&#x2F;(真恶意+误判良性) 在所有恶意文件中找回来多少真恶意</li>
-</ol>
-</li>
-</ol>
-<blockquote>
-<p>让我们将这些概念变得更加通俗和生动一些。继续侦探寻找”坏人”的游戏，我们可以将精确率、召回率和F1分数的定义以此类推。</p>
-<ol>
-<li><p>精确率：以为自己找到了一些”坏人”，但他们是”好人”。精确率其实是指你认定的”坏人”中，真正是”坏人”的比例。比如，你找到了10个你认为的”坏人”，但实际上只有5个是真正的”坏人”，那么你的精确率就是5&#x2F;10&#x3D;50%。</p>
-</li>
-<li><p>召回率：假设在所有的人中，实际上有20个”坏人”。召回率是说你能找出多少真正的”坏人”。比如，你找到了10个你认为的”坏人”，并且这10个人都真的是”坏人”，但实际上总共有20个”坏人”，那么你的召回率就是10&#x2F;20&#x3D;50%。</p>
-</li>
-<li><p>F1: 这是精确率与召回率的平均，可以理解为两者的平均成绩。就像你参加两个考试，一个测试精确度（你找出的‘坏人’有多少是真的’坏人’），一个测试召回率（你找到的’坏人’占总’坏人’的多少），而F1就是这两个考试的平均分。</p>
-</li>
-</ol>
-<p>准确率：假设一共有100个人，其中有20个”坏人”，80个”好人”，准确率就是，在这100个人中正确判断出”好人”和”坏人”的比例。比如，你判断出了15个”坏人”（实际上都是”坏人”）和70个”好人”（实际上都是”好人”），那么你的准确率就是(15+70)&#x2F;100&#x3D;85%。</p>
-</blockquote>
-<p>当让一个8岁的孩子理解这些机器学习的概念时，我们可以试图用更简单、更具象的例子来解释。</p>
-<ol>
-<li><p>AUC（Area Under the Curve）：想象一场足球比赛，我们的目标是预测一队是否能赢得比赛。每一队在开始比赛之前都会评估对手，判断他们是否会赢。现在，把这种判断的正确率画在纸上，如果我们判断得越准，那么我们在纸上的画就会越靠上。AUC就是这个图中我们的预测画出的部分与整个纸面的占比。<code>如果足球队判断的总是非常精确，那么我们的图就会占据大部分的空间，这就意味着AUC的值是很大的；如果判断的不准，那么我们所占的空间就会很小，AUC的值就小。</code></p>
-</li>
-<li><p>对数损失（Log loss）：让我们考虑一个掷硬币的游戏，你要猜测是正面还是反面。如果你非常确定硬币会落在正面，但结果却落在了反面，那你会觉得自己猜错了，并且错得离真实结果差很远。这就是对数损失，它测量的是你的预测和真实答案之间的差距。越接近真实的答案，对数损失就越小，也就表明你的预测越准确。</p>
-</li>
-<li><p>k 精确率（P@k）：假设我让你从一堆宝石中挑选出真正的宝石。你的挑选能力就像一个预测机器，试图预测哪些是真宝石。P@k就是看你挑选的前k个物品中，真正的宝石有多少。例如，如果你挑选出前5（假设k&#x3D;5）个中有3个真正的宝石，那么你的P@5就是3&#x2F;5&#x3D;0.6。</p>
-</li>
-<li><p>k 平均精率（AP@k）：这个和挑选宝石的游戏一样，只不过这次我们关心的不只是你挑选的宝石的总数，还关心你挑选的顺序。如果你最先挑出来的都是真宝石，那么你的评分就会更高。这就是AP@k，它考虑了你挑选的顺序和挑选的宝石的数量。</p>
-</li>
-<li><p>k 均值平均精确率（MAP@k）：还是那个宝石游戏，但这次我们更关心整体表现。如果你参与了3次挑选，每次挑选的表现（AP@k）都会记录下来，然后我们会求这3次的平均表现。这就是MAP@k，它帮助我们了解你在挑选宝石这个游戏中的整体表现。</p>
-</li>
-</ol>
-<p><strong>回归问题 误差 :</strong></p>
-<p>首先我们把模型预测错误理解成我们在打靶的时候，箭偏离了我们的目标。</p>
-<ol>
-<li><strong>平均绝对误差 (MAE)</strong>: 这就像你每次打箭偏离的距离，有时偏左，有时偏右，但我们只管看偏离目标的绝对距离，不管偏左还是偏右，然后我们计算你每次打箭的平均偏离距离。</li>
-<li><strong>均方误差 (MSE)</strong>: 这像你把每次射箭偏移的距离的平方求和然后除以箭的数量。因为我们不仅看你偏离目标的距离，我们还考虑你偏离的幅度。例如，我们更重视你偏离的距离较长的错误。</li>
-<li><strong>均方根误差 (RMSE)</strong>: 这就像你首先计算每次你射箭离目标的距离的平方，然后求全部的平均值，最后开平方，这样可以更真实地反映你的平均表现，因为它考虑到了大的偏离比小的偏离更严重。</li>
-<li><strong>均方根对数误差 (RMSLE)</strong>: 这就像RMSE, 但在比较你的预测和真实值的偏离度的时候，我们并不是直接比较这两个值，而是比较它们的对数。这样就意味着我们对预测值与真实值差别的比例更感兴趣，而不是其绝对差别。例如，预测100元而真实值为200元的错误和预测1000元而真实值为2000元的错误被看作是相同的。</li>
-<li><strong>平均百分比误差 (MPE)</strong>: 这就像每次你射箭，我们不仅仅看你离目标偏多少距离，还要看这个距离相对于目标的总距离的比例是多少，并且是有方向的，偏左和偏右是有区别的。</li>
-<li><strong>平均绝对百分比误差 (MAPE)</strong>: 这就是对每次你射箭偏离目标的距离的比例进行平均，偏左和偏右看作一样罪大恶极。</li>
-<li><strong>R2</strong>: 这就像是你的瞄准器相比于一个完全乱射的人，表现得有多好。如果你的瞄准器完全正确，R2就是1；如果你的瞄准器像一个完全随机射箭的人，R2就是0；如果你的瞄准器做得比随机射箭的人还糟，R2就可能是负的。</li>
-</ol>
-<p>总的来说，所有这些指标都能以不同的方式告诉我们预测与实际结果之间的差距大小，偏离方向以及偏离的频率等信息，帮助我们判断模型的预测性能。</p>
-<blockquote>
-<p>注：简单理解，会用即可。</p>
-</blockquote>
-<p>在二元分类的情况下，可采用类似下面的方法。<br>$$<br>Prediction&#x3D;Probability &gt;&#x3D; Threshold<br>$$<br>预测是一个只包含二元变量的新列表。如果概率大于或等于给定的阈值，则预测中的一项为 1，否则为 0。你猜怎么着，你可以<strong>使用 ROC 曲线来选择这个阈值</strong>！ROC 曲线会告诉您阈值对假阳性率和真阳性率的影响，进而影响假阳性和真阳性。</p>
-<p>为了选择最适合您的问题和数据集的阈值，可根据验证集结果选择阈值：当你有一个初步的模型训练完成后，可以在验证集上进行试验，具体就是<strong>尝试不同的阈值</strong>，观察不同阈值下模型的精确率、召回率、F1 Score（精确率和召回率的调和平均值）以及ROC曲线下的面积(AUC-ROC)【<code>多方面的考察</code>】，根据你的目标选择最优的阈值。</p>
-<blockquote>
-<p>这也不难。那什么难？什么都不难。机器学习很简单。</p>
-</blockquote>
-
-        <h3 id="5-模型的结构组织"   >
-          <a href="#5-模型的结构组织" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-模型的结构组织" class="headerlink" title="5 模型的结构组织"></a>5 模型的结构组织</h3>
+        <h3 id="生下来不要着急补钙"   >
+          <a href="#生下来不要着急补钙" class="heading-link"><i class="fas fa-link"></i></a><a href="#生下来不要着急补钙" class="headerlink" title="生下来不要着急补钙"></a>生下来不要着急补钙</h3>
       <ul>
-<li>input&#x2F;  所有输入文件和数据 NLP的embeddings 图像<ul>
-<li>train.csv</li>
-<li>test.csv</li>
-</ul>
-</li>
-<li>src&#x2F; 所有相关的Python脚本 <code>*.py</code><ul>
-<li>create_folds.py</li>
-<li>train.py</li>
-<li>inference.py</li>
-<li>models.py</li>
-<li>config.py 存放必要的全局配置</li>
-<li>model_dispatcher.py 将调度我们的模型到训练脚本中</li>
-</ul>
-</li>
-<li>models&#x2F; 所有训练过的模型<ul>
-<li>model_rf.bin</li>
-<li>model_et.bin</li>
-</ul>
-</li>
-<li>notebooks&#x2F; 所有 jupyter notebook（即任何 <code>*.ipynb</code> 文件）都存储在笔记本文件夹中。<ul>
-<li>exploration.ipynb</li>
-<li>check_data.ipynb</li>
-</ul>
-</li>
-<li>README.md 描述您的项目，并写明如何训练模型或在生产环境中使用。</li>
-<li>LICENSE 包含项目的许可证，如 MIT、Apache 等。</li>
-</ul>
-<blockquote>
-<p>注：src 部分的切分很合理，尤其是模型调度文件和全局配置。</p>
-</blockquote>
-<p>例子，识别手写数字：</p>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── LICENSE</span><br><span class="line">├── README.md</span><br><span class="line">├── input</span><br><span class="line">│   ├── mnist_test.csv</span><br><span class="line">│   ├── mnist_train.csv</span><br><span class="line">│   └── mnist_train_folds.csv</span><br><span class="line">├── models</span><br><span class="line">│   ├── dt_0.bin</span><br><span class="line">│   └── rf_0.bin</span><br><span class="line">├── notebooks</span><br><span class="line">└── src</span><br><span class="line">    ├── __pycache__</span><br><span class="line">    ├── config.py</span><br><span class="line">    ├── create_folds.py</span><br><span class="line">    ├── model_dispatcher.py</span><br><span class="line">    ├── run.sh</span><br><span class="line">    └── train.py</span><br></pre></td></tr></table></div></figure>
-
-
-
-
-        <h3 id="6-处理分类变量"   >
-          <a href="#6-处理分类变量" class="heading-link"><i class="fas fa-link"></i></a><a href="#6-处理分类变量" class="headerlink" title="6 处理分类变量"></a>6 处理分类变量</h3>
-      <p>分类变量 <strong>离散</strong>变量 名义变量 只可以取有限数量的变量 【有限集合】</p>
-<blockquote>
-<p>注：分类变量可以是目标变量，也可以是特征变量。相反，目标变量也可以是分类变量，也可以是连续变量。</p>
-</blockquote>
-<ul>
-<li><p>无序 男性或女性 猫或狗</p>
-</li>
-<li><p>有序 低中高【有次序 有强度 程度的变化】</p>
-<ul>
-<li><p>标签变为数字编码  - 决策树 - 随机森林 - 提升树 - 或任何一种提升树模型 - XGBoost - GBM - LightGBM</p>
-<blockquote>
-<p>注：这样做也是有风险的，例如 把低中高编码为 1 2 3，这样<strong>默认了结果之间是等距离</strong>的，这符合现实吗？</p>
-</blockquote>
-</li>
-<li><p>【稀疏矩阵】数字扩展为 二进制（一个特征变为多个特征） - 线性模型、支持向量机或神经网络期待标准化数据</p>
-</li>
-<li><p>one-hot</p>
-<blockquote>
-<p>注：在用基于树的模型时，不需要对数据进行归一化处理。不过，在使用线性模型（如逻辑回归）时<strong>不容忽视</strong>。支持向量机或神经网络，也希望数据是标准化的。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<p>循化&#x2F;周期变量 周一~周日 </p>
-<p>二元 只有两个类别的分类变量</p>
-<blockquote>
-<p>处理 NaN 值的另一种方法是将其作为一个全新的类别。这是处理 NaN 值最常用的方法。</p>
-<p>所有未见过的新类别都将被映射为 “RARE”，而所有缺失值都将被映射为 “NONE”。</p>
-</blockquote>
-<p>例1：Kaggle 分类特征编码挑战赛中的 <em>cat-in-the-dat</em></p>
-<ol>
-<li><p>从目标变量来看，这是一个二元分类问题，可以先看一下目标变量的分布，观察到它是<strong>偏斜</strong>的。:yellow_heart: : :red_circle: &#x3D; 5:1</p>
-</li>
-<li><p>ord_2 特征包括6个不同的类别： - 冰冻 - 温暖 - 寒冷 - 较热 - 热 - 非常热</p>
-</li>
-</ol>
-<p>简单的映射为数字，使用 <code>.map(静态字典)</code>替换数字：</p>
-<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">映射字典</span></span><br><span class="line">mapping = &#123;</span><br><span class="line">&quot;Freezing&quot;: 0, </span><br><span class="line">&quot;Warm&quot;: 1, </span><br><span class="line">&quot;Cold&quot;: 2,</span><br><span class="line">&quot;Boiling Hot&quot;: 3, </span><br><span class="line">&quot;Hot&quot;: 4,</span><br><span class="line">&quot;Lava Hot&quot;: 5 </span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
-
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="comment"># 读取数据</span></span><br><span class="line">df = pd.read_csv(<span class="string">&quot;../input/cat_train.csv&quot;</span>) </span><br><span class="line"><span class="comment"># 取ord_2列，并使用映射将类别文本转换为数字</span></span><br><span class="line">df.loc[:, <span class="string">&quot;ord_2&quot;</span>] = df.ord_2.<span class="built_in">map</span>(mapping)</span><br></pre></td></tr></table></div></figure>
-
-<blockquote>
-<p>注：df.列名.map() df.列名.value_counts() df.列名.func() 很新的用法</p>
-</blockquote>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">df.ord_2.value_counts() <span class="comment"># 映射之前的数值计数</span></span><br><span class="line">Freezing       <span class="number">142726</span> </span><br><span class="line">Warm           <span class="number">124239</span></span><br><span class="line">Cold           <span class="number">97822</span></span><br><span class="line">Boiling Hot    <span class="number">84790</span></span><br><span class="line">Hot            <span class="number">67508</span></span><br><span class="line">Lava Hot       <span class="number">64840</span> </span><br><span class="line">Name: ord_2, dtype: int64</span><br><span class="line"><span class="comment"># 映射之之后的数值计数</span></span><br><span class="line"><span class="number">0.0</span>   <span class="number">142726</span></span><br><span class="line"><span class="number">1.0</span>   <span class="number">124239</span></span><br><span class="line"><span class="number">2.0</span>    <span class="number">97822</span></span><br><span class="line"><span class="number">3.0</span>    <span class="number">84790</span></span><br><span class="line"><span class="number">4.0</span>    <span class="number">67508</span></span><br><span class="line"><span class="number">5.0</span>    <span class="number">64840</span></span><br><span class="line">Name: ord_2, dtype: int64</span><br></pre></td></tr></table></div></figure>
-
-<blockquote>
-<p>注： 以上方法为 标签编码（Label Encoding）我们将每个类别编码为一个数字标签。sklearn 的 LabelEncoder提供了实现。</p>
-</blockquote>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing </span><br><span class="line"><span class="comment"># 读取数据</span></span><br><span class="line">df = pd.read_csv(<span class="string">&quot;../input/cat_train.csv&quot;</span>) </span><br><span class="line"><span class="comment"># 将缺失值填充为&quot;NONE&quot; </span></span><br><span class="line">df.loc[:, <span class="string">&quot;ord_2&quot;</span>] = df.ord_2.fillna(<span class="string">&quot;NONE&quot;</span>) </span><br><span class="line"><span class="comment"># LabelEncoder编码</span></span><br><span class="line">lbl_enc = preprocessing.LabelEncoder()</span><br><span class="line"><span class="comment"># 转换数据</span></span><br><span class="line">df.loc[:, <span class="string">&quot;ord_2&quot;</span>] = lbl_enc.fit_transform(df.ord_2.values)</span><br></pre></td></tr></table></div></figure>
-
-<blockquote>
-<p>注：</p>
-<ul>
-<li><p>LabelEncoder 并不能处理NaN值，所以需要先使用fillna填充。许多基于树的模型可直接使用 <strong>标签编码</strong>： - 决策树 - 随机森林 - 提升树 - 或任何一种提升树模型 - XGBoost - GBM - LightGBM。</p>
-</li>
-<li><p><strong>但是</strong> <strong>标签编码</strong> 不能用于线性模型、支持向量机或神经网络，因为它们希望数据是标准化的。</p>
-<blockquote>
-<p>Linear Models、SVM、Neural Networks 等都是运用数字大小，距离等连续性、有序性信息来学习参数的。如果输入的是标签编码【<strong>离散</strong>】，可能导致学习过程出现偏差，因为它们会<strong>默认</strong>标签编码代表了某种有序或距离关系。为了避免这种现象，通常使用“独热编码”（One-Hot Encoding）或者“哑变量”（Dummy Variables）等方法。one-hot下，每个类别都<strong>同等重要</strong>，不偏向任何方向，这样的编码更适合这类模型。这样当特征可选集合很大，会导致维度过高可用<strong>嵌入编码</strong>来降维。</p>
-</blockquote>
-</li>
-</ul>
-</blockquote>
-<p>对线性模型采用<strong>二值化</strong>处理【比one-hot的更短，信息密集；但又比数字标签稀疏】：</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Freezing    --&gt; <span class="number">0</span> --&gt; <span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line">Warm        --&gt; <span class="number">1</span> --&gt; <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> </span><br><span class="line">Cold        --&gt; <span class="number">2</span> --&gt; <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> </span><br><span class="line">Boiling Hot --&gt; <span class="number">3</span> --&gt; <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> </span><br><span class="line">Hot         --&gt; <span class="number">4</span> --&gt; <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line">Lava Hot    --&gt; <span class="number">5</span> --&gt; <span class="number">1</span> <span class="number">0</span> <span class="number">1</span></span><br></pre></td></tr></table></div></figure>
-
-<p>这样单个标签变成了多个标签（每一维是一个特征），对于二值化数据我们可以采取稀疏性存储，简单说就是只存储有<code>1</code>的位置坐标。</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> sparse</span><br><span class="line"></span><br><span class="line">example = np.array(</span><br><span class="line">    [</span><br><span class="line">        [<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>], </span><br><span class="line">        [<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>], </span><br><span class="line">        [<span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>]</span><br><span class="line">    ] </span><br><span class="line">)</span><br><span class="line">sparse_example = sparse.csr_matrix(example)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(sparse_example.data.nbytes) <span class="comment"># 数据字节数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 全部的字节数 包含指针和索引</span></span><br><span class="line"><span class="built_in">print</span>(</span><br><span class="line">    sparse_example.data.nbytes +</span><br><span class="line">    sparse_example.indptr.nbytes +</span><br><span class="line">    sparse_example.indices.nbytes </span><br><span class="line">)</span><br></pre></td></tr></table></div></figure>
-
-<p>将独热编码矩阵转换为密集矩阵，空间的节省更明显。</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成符合均匀分布的随机整数，维度为[1000000, 10000000]</span></span><br><span class="line">example = np.random.randint(<span class="number">1000</span>, size=<span class="number">1000000</span>)</span><br><span class="line"><span class="comment"># 独热编码，非稀疏矩阵</span></span><br><span class="line">ohe = preprocessing.OneHotEncoder(sparse=<span class="literal">False</span>)</span><br><span class="line"><span class="comment"># 将随机数组展平</span></span><br><span class="line">ohe_example = ohe.fit_transform(example.reshape(-<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;Size of dense array: <span class="subst">&#123;ohe_example.nbytes&#125;</span>&quot;</span>) </span><br><span class="line"><span class="comment"># 独热编码，稀疏矩阵</span></span><br><span class="line">ohe = preprocessing.OneHotEncoder(sparse=<span class="literal">True</span>)</span><br><span class="line"><span class="comment"># 将随机数组展平</span></span><br><span class="line">ohe_example = ohe.fit_transform(example.reshape(-<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;Size of sparse array: <span class="subst">&#123;ohe_example.data.nbytes&#125;</span>&quot;</span>) </span><br><span class="line">full_size = (</span><br><span class="line">    ohe_example.data.nbytes +</span><br><span class="line">    ohe_example.indptr.nbytes + </span><br><span class="line">    ohe_example.indices.nbytes </span><br><span class="line">)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;Full size of sparse array: <span class="subst">&#123;full_size&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></div></figure>
-
-<blockquote>
-<p>注：使用独热向量的默认前提是 你准备放弃标签编码的方式 不再关心特征变量之间的 <strong>顺序</strong> 关系</p>
-<p>如果你想保留数据里面的顺序关系，可以尝试以下几种方法：</p>
-<ol>
-<li><p><strong>序数编码（Ordinal Encoding）</strong>：顺序编码是将类别赋予一个整型，这样可以保存类别之间的顺序。所以比如 “冰冻”(0) &lt; “温暖”(1) &lt; “寒冷”(2) &lt; “较热”(3) &lt; “热”(4) &lt; “非常热”(5)。</p>
-<p>但是，这种编码虽然维持了顺序关系，却引入了一个问题，那就是相邻类别之间的距离变得有意义了。在上述的例子中，“冰冻”和“温暖”之间的“距离”和“温暖”和“寒冷”之间的“距离”是一样的，但实际情况可能并不这样。</p>
-</li>
-<li><p><strong>分段编码（Bucket Encoding）</strong>：你可以把它们划分为几个区间，比如0-0.2代表“冰冻”，0.2-0.4代表“寒冷”，以此类推。这样可以在一定程度上反映出顺序关系，但仍然可能存在相邻类别间的距离有意义的问题。</p>
-</li>
-<li><p><strong>Embedding</strong>：高维稀疏特征可以通过嵌入（embedding）在低维稠密空间中表示。对于有序类别分类，嵌入可以学习出它们的顺序关系。比如在NLP领域中，词嵌入（word embeddings）就是一种有效的表示方式，它不仅能反映词之间的相似度，也可以反映出一些词序关系。</p>
-</li>
-</ol>
-<p>针对你的问题，如果“冰冻”，“温暖”，“寒冷”，“较热”，“热”，“非常热”之间的差异是线性的，可以选择序数编码。如果差异复杂，建议选择嵌入方法，通过训练来学习他们之间的相似性和顺序关系。</p>
-<p>总之，看最后的效果，保有哪些信息最结果最有利，实际上是难以兼顾原始数据的 【模糊的】顺序性和量级关系。</p>
-</blockquote>
-
-        <h4 id="将特征变量转换为数值变量"   >
-          <a href="#将特征变量转换为数值变量" class="heading-link"><i class="fas fa-link"></i></a><a href="#将特征变量转换为数值变量" class="headerlink" title="将特征变量转换为数值变量"></a>将特征变量转换为数值变量</h4>
-      <p>在数据中，<em>ord_2</em> 的值为“热“的 id 有多少？【言外之意，用当前特征变量的定义域的某个取值在整体数据中出现的<strong>频率</strong>来代替它】</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">In [X]: df[df.ord_2 == <span class="string">&quot;Boiling Hot&quot;</span>].shape</span><br><span class="line">Out[X]: (<span class="number">84790</span>, <span class="number">25</span>) <span class="comment"># 说明Boiling Hot的频度是84790</span></span><br></pre></td></tr></table></div></figure>
-
-<p>查看单个特征 的所有ID的频度</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">In [X]: df.groupby([<span class="string">&quot;ord_2&quot;</span>])[<span class="string">&quot;id&quot;</span>].count()</span><br><span class="line">Out[X]: </span><br><span class="line">ord_2</span><br><span class="line">Boiling Hot <span class="number">84790</span></span><br><span class="line">Cold 		<span class="number">97822</span> </span><br><span class="line">Freezing 	<span class="number">142726</span> </span><br><span class="line">Hot 		<span class="number">67508</span> 	</span><br><span class="line">Lava Hot 	<span class="number">64840</span> </span><br><span class="line">Warm 		<span class="number">124239</span> </span><br><span class="line">Name: <span class="built_in">id</span>, dtype: int64</span><br></pre></td></tr></table></div></figure>
-
-<p>直接使用频度来替换 ID</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">In [X]: df.groupby([<span class="string">&quot;ord_2&quot;</span>])[<span class="string">&quot;id&quot;</span>].transform(<span class="string">&quot;count&quot;</span>)</span><br><span class="line">Out[X]:</span><br><span class="line"><span class="number">0</span>         <span class="number">67508.0</span></span><br><span class="line"><span class="number">1</span>        <span class="number">124239.0</span></span><br><span class="line"><span class="number">2</span>        <span class="number">142726.0</span> <span class="comment"># Freezing</span></span><br><span class="line"><span class="number">3</span>         <span class="number">64840.0</span></span><br><span class="line"><span class="number">4</span>         <span class="number">97822.0</span></span><br><span class="line">...</span><br><span class="line"><span class="number">599995</span>   <span class="number">142726.0</span> <span class="comment"># Freezing</span></span><br><span class="line"><span class="number">599996</span>    <span class="number">84790.0</span></span><br><span class="line"><span class="number">599997</span>   <span class="number">142726.0</span> <span class="comment"># Freezing</span></span><br><span class="line"><span class="number">599998</span>   <span class="number">124239.0</span></span><br><span class="line"><span class="number">599999</span>    <span class="number">84790.0</span></span><br><span class="line">Name: <span class="built_in">id</span>, Length: <span class="number">600000</span>, dtype: float64</span><br><span class="line"></span><br></pre></td></tr></table></div></figure>
-
-<p>groupby类似于数据库的 联合查找，并增加了一个新的列 <strong>count</strong> 用于记录不同组合的频度</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">In [X]: df.groupby(</span><br><span class="line">   ...:     [</span><br><span class="line">   ...:        <span class="string">&quot;ord_1&quot;</span>,</span><br><span class="line">   ...:        <span class="string">&quot;ord_2&quot;</span></span><br><span class="line">   ...:     ]</span><br><span class="line">   ...: )[<span class="string">&quot;id&quot;</span>].count().reset_index(name=<span class="string">&quot;count&quot;</span>) </span><br><span class="line">Out[X]:</span><br><span class="line">ord_1        ord_2  count</span><br><span class="line"><span class="number">0</span>  Contributor  Boiling Hot <span class="number">15634</span></span><br><span class="line"><span class="number">1</span>  Contributor         Cold <span class="number">17734</span></span><br><span class="line"><span class="number">2</span>  Contributor     Freezing <span class="number">26082</span></span><br><span class="line"><span class="number">3</span>  Contributor          Hot <span class="number">12428</span></span><br><span class="line"><span class="number">4</span>  Contributor     Lava Hot <span class="number">11919</span></span><br><span class="line"><span class="number">5</span>  Contributor         Warm <span class="number">22774</span></span><br><span class="line"><span class="number">6</span>       Expert  Boiling Hot <span class="number">19477</span></span><br><span class="line"><span class="number">7</span>       Expert         Cold <span class="number">22956</span></span><br><span class="line"><span class="number">8</span>       Expert     Freezing <span class="number">33249</span></span><br><span class="line"><span class="number">9</span>       Expert          Hot <span class="number">15792</span></span><br><span class="line"><span class="number">10</span>      Expert     Lava Hot <span class="number">15078</span></span><br><span class="line"><span class="number">11</span>      Expert         Warm <span class="number">28900</span></span><br><span class="line"><span class="number">12</span> Grandmaster  Boiling Hot <span class="number">13623</span></span><br><span class="line"><span class="number">13</span> Grandmaster         Cold <span class="number">15464</span></span><br><span class="line"><span class="number">14</span> Grandmaster     Freezing <span class="number">22818</span></span><br><span class="line"><span class="number">15</span> Grandmaster          Hot <span class="number">10805</span></span><br><span class="line"><span class="number">16</span> Grandmaster     Lava Hot <span class="number">10363</span></span><br><span class="line"><span class="number">17</span> Grandmaster         Warm <span class="number">19899</span></span><br><span class="line"><span class="number">18</span>      Master  Boiling Hot <span class="number">10800</span></span><br><span class="line">...</span><br></pre></td></tr></table></div></figure>
-
-<p>您现在一定已经注意到，我使用 id 列进行计数。不过，你也可以通过<strong>对列的组合</strong>进行分组，对其他列进行计数。</p>
-<p>还有一个小窍门，就是从这些分类变量中创建新特征。</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">In [X]: df[<span class="string">&quot;new_feature&quot;</span>] = (</span><br><span class="line">   ...:     df.ord_1.astype(<span class="built_in">str</span>)</span><br><span class="line">   ...:     + <span class="string">&quot;_&quot;</span></span><br><span class="line">   ...:     + df.ord_2.astype(<span class="built_in">str</span>)</span><br><span class="line">   ...: )</span><br><span class="line">In [X]: df.new_feature </span><br><span class="line">Out[X]:</span><br><span class="line"><span class="number">0</span>                Contributor_Hot</span><br><span class="line"><span class="number">1</span>               Grandmaster_Warm</span><br><span class="line"><span class="number">2</span>                   nan_Freezing</span><br><span class="line"><span class="number">3</span>                Novice_Lava Hot</span><br><span class="line"><span class="number">4</span>               Grandmaster_Cold</span><br><span class="line">               ...</span><br><span class="line"><span class="number">599999</span>   Contributor_Boiling Hot</span><br><span class="line">Name: new_feature, Length: <span class="number">600000</span>, dtype: <span class="built_in">object</span></span><br></pre></td></tr></table></div></figure>
-
-<p>那么，我们应该把哪些类别结合起来呢？这并没有一个简单的答案。这取决于您的数据和特征类型。一些<strong>领域知识</strong>对于创建这样的特征可能很有用。但是，如果你不担心内存和 CPU 的使用，你可以采用一种贪婪的方法，即创建许多这样的组合，然后使用一个模型来决定哪些特征是有用的，并保留它们。</p>
-<blockquote>
-<p>注：暴力的尝试在允许的条件下，尝试所有有效的组合 <code>n!</code> 是很稳妥的。</p>
-</blockquote>
-<p>简单步骤：</p>
-<ul>
-<li><p>填充 NaN 值（这一点非常重要！）</p>
-</li>
-<li><p>使用 scikit-learn 的 LabelEncoder 或映射字典进行标签编码，将它们转换为整数。</p>
-</li>
-<li><p>创建独热编码。是的，你可以跳过二值化！ </p>
-</li>
-<li><p>建模！我指的是机器学习。</p>
-</li>
+<li>补钙过度，会让囟门过早地闭合，脑子的容量得不到保证。</li>
+<li>活的自然，最好是母乳喂养；适当补充营养。</li>
 </ul>
 
-        <h4 id="处理NaN值"   >
-          <a href="#处理NaN值" class="heading-link"><i class="fas fa-link"></i></a><a href="#处理NaN值" class="headerlink" title="处理NaN值"></a>处理NaN值</h4>
+        <h3 id="吃甜食、和冷饮的后果"   >
+          <a href="#吃甜食、和冷饮的后果" class="heading-link"><i class="fas fa-link"></i></a><a href="#吃甜食、和冷饮的后果" class="headerlink" title="吃甜食、和冷饮的后果"></a>吃甜食、和冷饮的后果</h3>
       <ul>
-<li>直接丢弃这一行的所有数据 不建议</li>
-<li>作为 全新类別 使用频度值来代替</li>
-<li>填充一个固定值 <strong>均值&#x2F;中位数&#x2F;众数&#x2F;零</strong> 可能导致数据偏斜</li>
-<li>使用模型进行预测填充： 可以用一个回归或者分类模型根据其它特征预测 NaN 值</li>
-<li>使用插值填充：插值法尤其适用于<strong>时间序列</strong>数据。插值法是在已知的值之间进行估计，例如线性插值或者多项式插值</li>
+<li>肾气不足，给发育造成了障碍。</li>
+<li>容易扁桃体发炎，腺体肥大，呼吸不能通畅。</li>
+<li>乳牙一直长，换不了恒牙。</li>
 </ul>
-<p><strong>罕见类别</strong>，即只在样本总数中占很小比例的类别。当模型或项目上线时，您在 <em>ord_2</em> 列中得到了一个在训练中不存在的类别。在这种情况下，模型管道会抛出一个错误，您对此无能为力。如果出现这种情况，那么可能是生产中的管道出了问题。如果这是预料之中的，那么您就必须修改您的模型管道，并在这六个类别中加入一个新类别。</p>
-<p>这个新类别被称为 “罕见 “类别。罕见类别是一种不常见的类别，可以包括许多不同的类别。您也可以尝试使用<strong>近邻模型</strong>来 “预测 “未知类别。请记住，如果您预测了这个类别，它就会成为训练数据中的一个类别。</p>
-<blockquote>
-<p>注：简单说，在实际使用的过程中提取得到的特征结果，不在自己的处理范围之内，如PDF的版本号不是数字而是乱码。</p>
-</blockquote>
-<p>一种可行的弥补方式：把测试集合中数据 不训练但是<strong>提取特征的定义域</strong>时带上他们，避免测试集合中出现大量未考虑到的特征变量的值。</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing </span><br><span class="line"><span class="comment"># 读取训练集</span></span><br><span class="line">train = pd.read_csv(<span class="string">&quot;../input/cat_train.csv&quot;</span>) </span><br><span class="line"><span class="comment"># 读取测试集</span></span><br><span class="line">test = pd.read_csv(<span class="string">&quot;../input/cat_test.csv&quot;</span>) </span><br><span class="line"><span class="comment"># 将测试集&quot;target&quot;列全部置为-1 因为不需要考虑</span></span><br><span class="line">test.loc[:, <span class="string">&quot;target&quot;</span>] = -<span class="number">1</span></span><br><span class="line"><span class="comment"># 将训练集、测试集沿行拼接</span></span><br><span class="line">data = pd.concat([train, test]).reset_index(drop=<span class="literal">True</span>) </span><br><span class="line"><span class="comment"># 将除&quot;id&quot;和&quot;target&quot;列的其他特征列名取出</span></span><br><span class="line">features = [x <span class="keyword">for</span> x <span class="keyword">in</span> train.columns <span class="keyword">if</span> x <span class="keyword">not</span> <span class="keyword">in</span> [<span class="string">&quot;id&quot;</span>, <span class="string">&quot;target&quot;</span>]] </span><br><span class="line"><span class="comment"># 遍历特征</span></span><br><span class="line"><span class="keyword">for</span> feat <span class="keyword">in</span> features:</span><br><span class="line">    <span class="comment"># 标签编码</span></span><br><span class="line">    lbl_enc = preprocessing.LabelEncoder()</span><br><span class="line">    <span class="comment"># 将空值替换为&quot;NONE&quot;,并将该列格式变为str</span></span><br><span class="line">    temp_col = data[feat].fillna(<span class="string">&quot;NONE&quot;</span>).astype(<span class="built_in">str</span>).values </span><br><span class="line">    <span class="comment"># 转换数值</span></span><br><span class="line">    data.loc[:, feat] = lbl_enc.fit_transform(temp_col)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 根据&quot;target&quot;列将训练集与测试集分开</span></span><br><span class="line">train = data[data.target != -<span class="number">1</span>].reset_index(drop=<span class="literal">True</span>) </span><br><span class="line">test = data[data.target == -<span class="number">1</span>].reset_index(drop=<span class="literal">True</span>)</span><br></pre></td></tr></table></div></figure>
 
-<blockquote>
-<p>注：以上方法只有在静态环境中有效，就是测试集合和训练集都在手里。而对于实时系统，测试集是动态到来的，拿不到也不知道可能的异常值。这样我们需要建立<strong>未知类别</strong>。</p>
-</blockquote>
-<p>这与自然语言处理问题非常相似。我们总是基于固定的词汇建立模型。增加词汇量就会增加模型的大小。像 BERT 这样的转换器模型是在 ~30000 个单词（英语）的基础上训练的。因此，当有新词输入时，我们会将其标记为 UNK（未知）。</p>
-<p>因此，您可以假设测试数据与训练数据具有相同的类别，也可以在训练数据中引入<strong>罕见或未知</strong>类别，以处理测试数据中的新类别。</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">In [X]: df.ord_4 = df.ord_4.fillna(<span class="string">&quot;NONE&quot;</span>)</span><br><span class="line">In [X]: df.loc[</span><br><span class="line">   ...:     df[<span class="string">&quot;ord_4&quot;</span>].value_counts()[df[<span class="string">&quot;ord_4&quot;</span>]].values &lt; <span class="number">2000</span>, <span class="comment"># 实际数值小于两千</span></span><br><span class="line">   ...:    <span class="string">&quot;ord_4&quot;</span></span><br><span class="line">   ...: ] = <span class="string">&quot;RARE&quot;</span></span><br><span class="line">In [X]: df.ord_4.value_counts()</span><br></pre></td></tr></table></div></figure>
-
-
-
-<p>剩下的，暂时没看懂：</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">encoded_dfs = []</span><br><span class="line">    <span class="keyword">for</span> fold <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):</span><br><span class="line">        df_train = df[df.kfold != fold].reset_index(drop=<span class="literal">True</span>) </span><br><span class="line">        df_valid = df[df.kfold == fold].reset_index(drop=<span class="literal">True</span>) </span><br><span class="line">        <span class="keyword">for</span> column <span class="keyword">in</span> features:</span><br><span class="line">            <span class="comment"># 目标编码</span></span><br><span class="line">            mapping_dict = <span class="built_in">dict</span>(df_train.groupby(column)[<span class="string">&quot;income&quot;</span>].mean() )</span><br><span class="line">            df_valid.loc[:, column + <span class="string">&quot;_enc&quot;</span>] = df_valid[column].<span class="built_in">map</span>(mapping_dict)</span><br><span class="line">        encoded_dfs.append(df_valid)</span><br><span class="line">    encoded_df = pd.concat(encoded_dfs, axis=<span class="number">0</span>) </span><br></pre></td></tr></table></div></figure>
-
-
-
-
-
-
-        <h3 id="7-特征工程"   >
-          <a href="#7-特征工程" class="heading-link"><i class="fas fa-link"></i></a><a href="#7-特征工程" class="headerlink" title="7 特征工程"></a>7 特征工程</h3>
-      <ol>
-<li><p>特征工程不仅仅是从数据中创建新特征，还包括不同类型的归一化和转换</p>
+        <h3 id="十六岁充满力量"   >
+          <a href="#十六岁充满力量" class="heading-link"><i class="fas fa-link"></i></a><a href="#十六岁充满力量" class="headerlink" title="十六岁充满力量"></a>十六岁充满力量</h3>
+      <ul>
+<li>小心漏精，漏尿，肾气不够充实自己，性格偏于中性。</li>
+<li>人为泄精，当失精太久会眼前发黑，对所有的事情没有兴趣。</li>
+<li>没有精，哪儿有气；没有气，哪儿有神。</li>
+<li>若要小儿安，三分饥与寒。不要吃太饱，不用捂太严。</li>
+<li>为啥会发热？发热好不好？<ul>
+<li>男性是阳刚之体，在生长中常有生理性发热 ——发一次热，长一次个儿。</li>
+<li>滥用抗生素，把热给压下去了，结果呢？阳刚没了。</li>
+<li>图一时之快，不是不疼了，而是没知觉了，但是问题还在。</li>
+</ul>
 </li>
-<li><p>填补缺失值 可以用 K近邻来填补 【训练回归模型预测】</p>
-<blockquote>
-<p>对于数值数据来说，比填充 0 更有效的方法之一是使用平均值进行填充。您也可以尝试使用该特征所有值的中位数来填充，或者使用最常见的值来填充缺失值。这样做的方法有很多。</p>
-</blockquote>
-</li>
-<li><p>您还可以为包含或不包含分类数据的数值数据创建许多其他特征。生成许多特征的一个简单方法就是创建一堆多项式特征,a^2</p>
-</li>
-</ol>
+</ul>
 
-        <h3 id="8-特征选择"   >
-          <a href="#8-特征选择" class="heading-link"><i class="fas fa-link"></i></a><a href="#8-特征选择" class="headerlink" title="8 特征选择"></a>8 特征选择</h3>
-      <ol>
-<li>删除方差小的，几乎不变就像常量，没有区分度</li>
-<li>删除相关性高的特征，两个表现力一样，只保留一个</li>
-<li>单变量特征选择 【值得一学】</li>
-<li>特征剔除法 【贪心法】</li>
-<li>特征重要性 【部分树模型支持】</li>
-</ol>
+        <h3 id="二十四筋骨强劲"   >
+          <a href="#二十四筋骨强劲" class="heading-link"><i class="fas fa-link"></i></a><a href="#二十四筋骨强劲" class="headerlink" title="二十四筋骨强劲"></a>二十四筋骨强劲</h3>
+      <ul>
+<li>二十四之前身体还有窜一窜，个子还有机会。</li>
+<li>阳刚之气，“肾气平均”，“筋骨劲强”，身体有节奏、有弹性。</li>
+<li>冲脉不盛，胡须稀疏，往往是把胃部搞坏了，冰凉凉的。</li>
+<li>五谷为养，只要有繁衍后代能力的种子，都有补益精气的作用。</li>
+<li>吃坚果补肾，一定吃熟的，最好再来一点盐。</li>
+<li>最养肾的是冬天，昼夜最养肾的是晚上，整天熬夜就是在透支肾精。</li>
+</ul>
 
-        <h3 id="9-图像分割"   >
-          <a href="#9-图像分割" class="heading-link"><i class="fas fa-link"></i></a><a href="#9-图像分割" class="headerlink" title="9 图像分割"></a>9 图像分割</h3>
-      <p>需要实践。</p>
+        <h3 id="四八，筋骨隆盛，肌肉满壮"   >
+          <a href="#四八，筋骨隆盛，肌肉满壮" class="heading-link"><i class="fas fa-link"></i></a><a href="#四八，筋骨隆盛，肌肉满壮" class="headerlink" title="四八，筋骨隆盛，肌肉满壮"></a>四八，筋骨隆盛，肌肉满壮</h3>
+      <ul>
+<li>三十二岁之前，吃是填，往里填得多、漏得少；过了三十二岁，同样吃饭，但消耗得多、补充得少，人的骨髓慢慢会越来越有空隙。</li>
+<li>当肌肉处于放松、松弛状态的时候，我们管它叫肉；当它紧绷发力的时候，叫肌。</li>
+<li>什么叫“壮”？就是说该发力的时候，它能壮起来。</li>
+<li>长期处于一种发力姿势且不变，把肉变成了肌，最后变为死肉，产生一身的病痛。</li>
+<li>过 了三十二岁，就开始走下坡路了。</li>
+</ul>
 
-        <h3 id="10-文本分类或回归方法"   >
-          <a href="#10-文本分类或回归方法" class="heading-link"><i class="fas fa-link"></i></a><a href="#10-文本分类或回归方法" class="headerlink" title="10 文本分类或回归方法"></a>10 文本分类或回归方法</h3>
-      <p>没有新东西。</p>
+        <h3 id="五八，肾气衰，发堕齿槁"   >
+          <a href="#五八，肾气衰，发堕齿槁" class="heading-link"><i class="fas fa-link"></i></a><a href="#五八，肾气衰，发堕齿槁" class="headerlink" title="五八，肾气衰，发堕齿槁"></a>五八，肾气衰，发堕齿槁</h3>
+      <ul>
+<li>想让自己的肾不衰，你就节约用电，节能减排。</li>
+<li>你的生理决定了你的功能，你的生理功能决定了你的心气和想法。</li>
+<li>三十二岁以后，熬不动夜了。熬完通宵以后，眼睛是干的，而且一周都滋润不过来。</li>
+</ul>
 
-        <h3 id="11-超参数优化"   >
-          <a href="#11-超参数优化" class="heading-link"><i class="fas fa-link"></i></a><a href="#11-超参数优化" class="headerlink" title="11 超参数优化"></a>11 超参数优化</h3>
-      <p>需要上手。</p>
+        <h3 id="四十八-面焦-发鬓斑白"   >
+          <a href="#四十八-面焦-发鬓斑白" class="heading-link"><i class="fas fa-link"></i></a><a href="#四十八-面焦-发鬓斑白" class="headerlink" title="四十八 面焦 发鬓斑白"></a>四十八 面焦 发鬓斑白</h3>
+      <ul>
+<li>阳气不足后，脸也会发黑、变得干枯，还有的人会出现 皱纹。</li>
+<li>男人的胆气全是源于肾精，肾精足，胆子大；肾气衰，胆气弱，头发就开始白了。</li>
+<li>头发白还有个原因，是受到了严重的心火的煎熬，心火把肾精熬干了。</li>
+<li>六味地黄丸是滋补更年期女人的精血不足的。</li>
+</ul>
 
-        <h3 id="12-模型堆叠"   >
-          <a href="#12-模型堆叠" class="heading-link"><i class="fas fa-link"></i></a><a href="#12-模型堆叠" class="headerlink" title="12 模型堆叠"></a>12 模型堆叠</h3>
-      <ol>
-<li>简单地说，组合相关性不高的模型比组合相关性很高的模型效果更好。</li>
-<li>使用<strong>AUC作为概率排序</strong> 【强！】</li>
-</ol>
+        <h3 id="七八，肝气衰，筋不能动，天癸竭，精少，肾脏衰"   >
+          <a href="#七八，肝气衰，筋不能动，天癸竭，精少，肾脏衰" class="heading-link"><i class="fas fa-link"></i></a><a href="#七八，肝气衰，筋不能动，天癸竭，精少，肾脏衰" class="headerlink" title="七八，肝气衰，筋不能动，天癸竭，精少，肾脏衰"></a>七八，肝气衰，筋不能动，天癸竭，精少，肾脏衰</h3>
+      <ul>
+<li>能不能有子弹是肾的事，能不能把子弹发射出去是肝的事。</li>
+<li>中医用补肝的方法让他们开窍于目，看得见。比如，这些人应该炖点儿猪肝、羊肝吃，不要加盐；或者补充点儿维生素 A，一吃眼睛就亮了。</li>
+<li>枸杞，它不是补肾药，也不是补肝药，它是催心火催欲的药。离家千里，不食枸杞。</li>
+<li>药酒不要多喝，如果用白酒泡，每天不超过5钱；用黄酒的话， 普通纸杯最多半杯。</li>
+</ul>
 
-        <h3 id="13-可重复代码与模型"   >
-          <a href="#13-可重复代码与模型" class="heading-link"><i class="fas fa-link"></i></a><a href="#13-可重复代码与模型" class="headerlink" title="13 可重复代码与模型"></a>13 可重复代码与模型</h3>
-      <p>Docker</p>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/09/26/%E7%99%BB%E5%B1%B1%E4%B9%8B%E7%BF%92/">登山之習</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-09-26</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-09-26</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h2 id="1-自由"   >
-          <a href="#1-自由" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-自由" class="headerlink" title="1 自由"></a>1 自由</h2>
-      <p>还是从一些零碎的感受说起，匆匆翻过一遍斯宾诺莎论人自由的小书，现写下自己试图理解他在讲什么时保留的粗浅痕迹。</p>
-<p>一个明显的直觉是斯宾诺莎和孔子的气质很像，以至于看书时恍惚眼前是论语，只把爱慕上帝替换为追求完满的君子，几乎可以贯通。不同，孔子不讲什么推理只说如何做。斯宾诺莎试图在认知层次讲清楚去做的必然性。</p>
-<p>人在和外物融合为一，体会到部分来自于上帝的完善，积累这种完善，直到和上帝融合为一，走向真正的幸福。这里上帝是万物存在的第一因。</p>
-<p>人爱恋完善的东西，当其越完善，爱恋也就越深刻。这种爱恋不是自由的，人对完善的爱和倾向也是被动的。</p>
-<p>为什么人需要爱恋呢？因为人的本性是虚弱的，不和其他好的完善的东西联合来获取力量，是无法维系存在的。</p>
-<p>进而，当人选择和暂有的仅仅含有很少完善的东西相结合时，一定会陷入不幸。如名利、权力、美色等就像大树的叶子，与叶子的爱恋的结合是脆弱的，它的枯萎会震动人的感情。叶子依赖大树的根存在，为什么不和这个日日翻新的树根联合呢？因为人看不见被遮蔽的东西。</p>
-<p>人有几种方式来认知事物，道听途说的，例如日本对自己二战的罪行是死不悔改等，从日常的听闻中得来某种判断，这种判断多是缺少理性的盲目的意见，进而产生的憎恶等情感。整个被动的过程，怎么说？一切可以言说的东西和至高的完善相比都是无谓的东西，让人好奇有那么多的完善去实现，为什么浪费时间在这种被动的、盲目的情感上呢？即人可以通过悟性来避免这种错误的发生。</p>
-<p>接着是从经验而来的意见，医生用过某种药物好用，就习惯认为这种药是万能的。悟性对从经验而来的意见表现无力，似乎从亲自感受出发的东西和悟性是平行的关系。</p>
-<p>还有来自理性推理得到的真实的信仰，如追求完善是自然的，人应该去追求完善。注意到，这里的说法是应该而不是真实的，说明眼前的判断仍然在我之外，需要用文字来暂存这种认识，而这部分的应该是真实的一部分，或者是真实的一个影子。在人和这个真实合二为一之前，该认知只是一个推理，以及从推理而来的信念支撑人去追求完善的东西，当人进入完满的实相中，应该如何也就失去了作为阶梯或船的使命，剩下的是真相全体。</p>
-<p>最后的方法是如实的见到实相并拥有明确的认知，即在那个东西的本身上见到那个东西，而非借助外部的描述的转手来认识这个东西。就是说人完全和上帝留存在这个东西中的完善合二为一，人享有了这个东西本身和清楚感知它的一切。</p>
-<p>没有本质的东西是不可被思议的。躯体是一种运动和静止的比例。人的心灵是上帝的无限完善的思想属性的一个式态，依附于上帝这个根本的实体，心灵拥有认识不同式态的能力，并自然依恋于极致完善的实体。人自然的倾向是完善他人，并从他人处感知上帝的一部分完善。如此，直到能保有在极致的完善中，成为猎户手里合适的斧头。</p>
-<p>人的安心和恐惧是一回事，都是不应该。因为对外物的好，产生了想要得到的希望，有把握就感到安心，否则恐惧，都是求之外，如果始终以追求完善为目标，日有寸进，何来忧惧和安心这些无所谓的感情呢？注意开头的不应该，该表达是一种典型的借助工具来说明，背后缺少对真实的完整把握，而仅仅借助理性推理得出某种情感是多余的。</p>
-<p>意志也是思想的某种式态，谈不到自由，本身就是无，无如何生无呢？即只有实体才谈得上自由，他们都是实体产生的一种式态。同样的人的心灵也是上帝思想的一种式态，也是一种无，谈不上产生新的式态，如自由。</p>
-<p>可以说，人完全被动的，但这种被动是更为深刻的自发倾向，即人只是自发的趋于完善，并把不完善的回归完善。</p>
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/09/20/hello-world/">Hello World</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-09-20</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-09-26</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>Welcome to <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>! This is your very first post. Check <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> or you can ask me on <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>.</p>
-
-        <h2 id="Quick-Start"   >
-          <a href="#Quick-Start" class="heading-link"><i class="fas fa-link"></i></a><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2>
+        <h3 id="八-八，则齿发去"   >
+          <a href="#八-八，则齿发去" class="heading-link"><i class="fas fa-link"></i></a><a href="#八-八，则齿发去" class="headerlink" title="八 八，则齿发去"></a>八 八，则齿发去</h3>
+      <ul>
+<li>肾精足的人，耳朵是往后抿着的。</li>
+<li>肾气变得枯竭，这是“齿发去，精少”的原因，最后没有精子了。</li>
+<li><strong>搓耳朵</strong>：不能从上往下搓，要从下往上 搓。两手一交叉，每天早晨搓十到二十下。</li>
+<li><strong>叩齿</strong>：每天早晨起来，有意识地叩叩上下的牙，意思是辛苦 了，这一天你们又该干活了，叩齿就是提前热身。</li>
+<li>补肾大法：不论大小便，都别看手机，咬紧牙关。</li>
+<li><strong>撮谷道</strong>，谷道是肛门的雅称。就是说你有意识地把它提起来，然后放下去，因为那是受你的意识控制的。</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/12/26/5%E5%85%B3%E7%88%B1%E5%A5%B3%E6%80%A7/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-12-26</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-12-25</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="关心女性"   >
+          <a href="#关心女性" class="heading-link"><i class="fas fa-link"></i></a><a href="#关心女性" class="headerlink" title="关心女性"></a>关心女性</h2>
       
-        <h3 id="Create-a-new-post"   >
-          <a href="#Create-a-new-post" class="heading-link"><i class="fas fa-link"></i></a><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3>
-      <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></div></figure>
+        <h3 id="经文"   >
+          <a href="#经文" class="heading-link"><i class="fas fa-link"></i></a><a href="#经文" class="headerlink" title="经文"></a>经文</h3>
+      <p>帝曰：人年老而无子者，材力尽邪？将天数然也？</p>
+<p> 岐伯曰：女子七岁，肾气盛，齿更发长。二七而天癸至，任脉通， 太冲脉盛，月事以时下，故有子。三七，肾气平均，故真牙生而长极。 四七，筋骨坚，发长极，身体盛壮。五七，阳明脉衰，面始焦，发始 堕。六七，三阳脉衰于上，面皆焦，发始白。七七，任脉虚，太冲脉衰 少，天癸竭，地道不通，故形坏而无子也。</p>
 
-<p>More info: <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+        <h3 id="七岁"   >
+          <a href="#七岁" class="heading-link"><i class="fas fa-link"></i></a><a href="#七岁" class="headerlink" title="七岁"></a>七岁</h3>
+      <ul>
+<li><p>女子第六感很灵，能沟通天地。</p>
+</li>
+<li><p>中医认为，吃甜食过多，会抑制肾气的生发，不利于身体发育。</p>
+</li>
+<li><p>补肾：</p>
+<ul>
+<li>糯米糕、秫米糕、黄糕。</li>
+<li>把面粉洗到最后，淀粉都洗没的时候留下的面筋。</li>
+<li>杜仲皮、益智仁，很好的让人精血充盈，提升智力。</li>
+<li>七岁还没有换牙长发的情况，可能是肾气不够。</li>
+<li>若提前则说明吃了太多助长的食物或药物。</li>
+</ul>
+</li>
+</ul>
 
-        <h3 id="Run-server"   >
-          <a href="#Run-server" class="heading-link"><i class="fas fa-link"></i></a><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3>
-      <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></div></figure>
+        <h3 id="二七"   >
+          <a href="#二七" class="heading-link"><i class="fas fa-link"></i></a><a href="#二七" class="headerlink" title="二七"></a>二七</h3>
+      <ul>
+<li>任脉（妊娠怀孕的意思）不通，看嘴唇颜色发紫。</li>
+<li>月经周期，一般二十八天。</li>
+<li>督脉走后背。</li>
+<li>女孩提前来月经，顺带年龄也提前成熟。<ul>
+<li>该睡不睡，见到或吸收的无效信息太多。</li>
+<li>滥用药物。</li>
+</ul>
+</li>
+<li>健康的人，四肢温暖、头脑冷静。</li>
+<li>小孩子没有情感的造作，病好治。</li>
+</ul>
 
-<p>More info: <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+        <h3 id="二十一岁"   >
+          <a href="#二十一岁" class="heading-link"><i class="fas fa-link"></i></a><a href="#二十一岁" class="headerlink" title="二十一岁"></a>二十一岁</h3>
+      <ul>
+<li>最美的年纪</li>
+<li>十四到二十一，要含胸拔背。</li>
+<li>少吃甜食，多吃苦。</li>
+<li>一定睡子午觉，晚上十一点到凌晨一点。</li>
+</ul>
 
-        <h3 id="Generate-static-files"   >
-          <a href="#Generate-static-files" class="heading-link"><i class="fas fa-link"></i></a><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3>
-      <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></div></figure>
+        <h3 id="二十八顶峰"   >
+          <a href="#二十八顶峰" class="heading-link"><i class="fas fa-link"></i></a><a href="#二十八顶峰" class="headerlink" title="二十八顶峰"></a>二十八顶峰</h3>
+      <ul>
+<li>头发又黄又短，稀稀疏疏，说明气血不足，不能娶。</li>
+<li>二十一到二十八生孩子是最好的，有力气。</li>
+</ul>
 
-<p>More info: <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+        <h3 id="三十五"   >
+          <a href="#三十五" class="heading-link"><i class="fas fa-link"></i></a><a href="#三十五" class="headerlink" title="三十五"></a>三十五</h3>
+      <ul>
+<li>面容发黑，掉头发，说明气血不足以支撑许多的消耗。</li>
+<li>肠胃和大肠的功能衰弱了，外面的脸色就不好看了。</li>
+<li>人有“川”字纹的时候，第一判断是他的膀胱或前列腺有问题。</li>
+<li>眼角的皱纹和两鬓白发的出 现，说明自己的胆气已经不足了。</li>
+<li>调理胃部：<ul>
+<li>喝姜枣茶</li>
+<li>喝热水</li>
+</ul>
+</li>
+</ul>
 
-        <h3 id="Deploy-to-remote-sites"   >
-          <a href="#Deploy-to-remote-sites" class="heading-link"><i class="fas fa-link"></i></a><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3>
-      <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></div></figure>
+        <h3 id="六七面焦白发"   >
+          <a href="#六七面焦白发" class="heading-link"><i class="fas fa-link"></i></a><a href="#六七面焦白发" class="headerlink" title="六七面焦白发"></a>六七面焦白发</h3>
+      <ul>
+<li>当你的肾精足了以后，白头发会变黑</li>
+<li>心和肾是冤家， 一个火，一个水。火烧得太旺，会把水熬干；水太旺，你会觉得活得没意思。</li>
+<li>以酒为浆， 以妄为常，去忙那些虚妄的事，所以没有精血滋养自己。</li>
+<li>病态的身体会导致病态的思想，甚 至病态的人格。</li>
+</ul>
 
-<p>More info: <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</div></div></article></section><nav class="paginator"><div class="paginator-inner"><span class="page-number current">1</span></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/lianq.png" alt="avatar"></div><p class="sidebar-ov-author__text">刚乾日新</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">归档</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2023</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>一诚</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.8.0"></script><script src="/js/stun-boot.js?v=2.8.0"></script><script src="/js/scroll.js?v=2.8.0"></script><script src="/js/header.js?v=2.8.0"></script><script src="/js/sidebar.js?v=2.8.0"></script></body></html>
+        <h3 id="七七"   >
+          <a href="#七七" class="heading-link"><i class="fas fa-link"></i></a><a href="#七七" class="headerlink" title="七七"></a>七七</h3>
+      <ul>
+<li>嘴唇干燥，任脉虚了。</li>
+<li>42-49她心里有虚火，心情波动也大。</li>
+<li>伤神的人，肚脐周围都是冰冷的。</li>
+<li>心口窝被寒截住了，很容易想不开，看事悲观。</li>
+<li>正常人到更年期了，那我们给她适当地调整，让她自自然然度过。</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/12/26/4%E5%90%88%E4%BA%8E%E9%81%93%E6%B3%95/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-12-26</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-12-18</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="合于道"   >
+          <a href="#合于道" class="heading-link"><i class="fas fa-link"></i></a><a href="#合于道" class="headerlink" title="合于道"></a>合于道</h1>
+      
+        <h2 id="经文"   >
+          <a href="#经文" class="heading-link"><i class="fas fa-link"></i></a><a href="#经文" class="headerlink" title="经文"></a>经文</h2>
+      <p>是以志闲而少欲，心安而不惧，形劳而不倦，气从以顺， 各从其欲，皆得所愿。故美其食，任其服，乐其俗，高下不相 慕，其民故曰朴。</p>
+<p>是以嗜欲不能劳其目，淫邪不能惑其心，愚智贤不肖不惧于物，故合于道。所以能年皆度百岁而动作不衰者，以其德全不危也。</p>
+
+        <h3 id="主宰清闲"   >
+          <a href="#主宰清闲" class="heading-link"><i class="fas fa-link"></i></a><a href="#主宰清闲" class="headerlink" title="主宰清闲"></a>主宰清闲</h3>
+      <ol>
+<li>志，一是往前追忆，二是将来要做什么。</li>
+<li>闲，活在当下，没有我，也没有未来。</li>
+<li>肾主志：肾气、肾精充足时，记忆力强，元气充沛，白发转黑。</li>
+<li>反复回想一件事就是执：<ol>
+<li>爱恨情仇忘不了，心里淤积成结，变成具体的记忆。</li>
+<li>对没有发生的事情，过分的渴望，即焦虑。</li>
+</ol>
+</li>
+<li>因思远慕谓之虑<ol>
+<li>期必，以为某件事一定要达成如何如何，得之则喜，失之则空虚。以为种下了因就一定会结果，不明理，不知戒惧。</li>
+<li>不痴不聋， 不做家翁。忘掉该忘掉的事，虚静守一。</li>
+</ol>
+</li>
+<li>适当节制欲望<ol>
+<li>把自己的精气神省下来，寻求更高境界的快乐。</li>
+<li>省着用、慢慢吃，有节奏的消化，养护胃部。</li>
+</ol>
+</li>
+<li>本能<ol>
+<li>人身上有一层看不到的卫气，知冷知热，能自然调节。</li>
+<li>欲是生物的本能，不是意识，也不动心，它是柔嫩而敏感的。</li>
+</ol>
+</li>
+<li>莫失去自我<ol>
+<li>不要突破极限，小心突破极限最终会导致身体的崩溃。</li>
+<li>不要过度，不要过度抑制，也不要过度张扬。</li>
+<li>蒸桑拿的热，是一种邪热。热的频率和人体不一致，这样排汗是在遗失精气。</li>
+<li>无为而治而不是干蠢事、瞎折腾。</li>
+</ol>
+</li>
+<li>求心安<ol>
+<li>安，三面环山，一面有出口。</li>
+<li>首先，家里有女人，即心神，真宰，大程子说把心放在腔子里。</li>
+<li>第二，心神在主位，要保护好心神的元气丰沛。</li>
+<li>心包（物质的）完整，外邪难以入侵，心神被保护好了，没有什么可怕的。想到猴子去摸老虎屁股的好奇心。</li>
+<li>心（灵明的）胸口往上到锁骨之间。</li>
+</ol>
+</li>
+<li>恐是严重的心里抽紧，惧是眼睛瞪大了。</li>
+<li>形劳而不倦<ol>
+<li>倦，肌肉太疲惫，痉挛收缩，卷起来了。</li>
+<li>形体达到用的极限，就会抽筋。</li>
+<li>劳，没加润滑油、没有足够精气的状态下劳作。<ol>
+<li>眼睛干涩还要去看电脑屏幕。</li>
+<li>身体疲乏还要做所谓锻炼。</li>
+</ol>
+</li>
+<li>过度劳累，失去知觉<ol>
+<li>要恢复知觉，身体自然就会给你一个信号，停一停。</li>
+<li>反面的，运动员脚疼，打封闭，让自己的知觉丧失。</li>
+<li>过度劳累之后，躺在沙发上，疲乏不能动。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>正常人：头脑冷静、手脚暖和<ol>
+<li>做到有余地的、自然的休息，即顺着内心神明的安排。</li>
+<li>内心着急、情绪激动时，手脚冰凉，气血往心脑集中。</li>
+<li>有两点要求：<ol>
+<li>懂得省，总有元气盈余。</li>
+<li>疏通元气的经脉是通畅的。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>各所从欲，皆得所愿<ol>
+<li>有节制的满足身体自然的欲望（温饱，安危）。</li>
+<li>愿，即和谐，尊重他人的想法。</li>
+</ol>
+</li>
+<li>真正的饮食<ol>
+<li>把一顿饭吃美了，吃出节奏感，分寸感，美感。</li>
+<li>活在当下，把能调动的元气在当下使用的恰到好处。</li>
+</ol>
+</li>
+<li>穿衣<ol>
+<li>内衣尽量宽松舒适。</li>
+<li>不穿牛仔裤等过于紧绷的衣服。</li>
+<li>传统：香囊、玉镯、玉佩。</li>
+</ol>
+</li>
+<li>高下不相慕，活给自己看。</li>
+<li>莫要嗜欲<ol>
+<li>打游戏、看电视把眼睛看到干涩不能视物。</li>
+<li>弱水三千我只取一瓢，知道自己要什么。</li>
+<li>少就是多，舍弃就是更好的得到。</li>
+</ol>
+</li>
+<li>掌握天地的变化，跟着它走。</li>
+<li>他人帮助固然可贵，不如保持自己良好的自愈能力，让生机自发。</li>
+<li></li>
+</ol>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/12/26/3%E7%97%85%E7%90%86%E4%B8%8D%E5%8F%98/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-12-26</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-12-18</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="悟不听不见处"   >
+          <a href="#悟不听不见处" class="heading-link"><i class="fas fa-link"></i></a><a href="#悟不听不见处" class="headerlink" title="悟不听不见处"></a>悟不听不见处</h1>
+      
+        <h2 id="经文"   >
+          <a href="#经文" class="heading-link"><i class="fas fa-link"></i></a><a href="#经文" class="headerlink" title="经文"></a>经文</h2>
+      <p>夫上古圣人之教下也，皆谓之虚邪贼风，避之有时，恬惔 虚无，真气从之，精神内守，病安从来。</p>
+<ol>
+<li><p>一加一等于二，是智；一加一不等于二、大于二或小于二， 是慧。</p>
+</li>
+<li><p>水清澈干净，但受伤之后，大夫说别沾水，水干净吗？</p>
+</li>
+<li><p>人枪合一，呼吸、 节奏、心神调到一致的时候，一枪中的。</p>
+</li>
+</ol>
+<blockquote>
+<p>慧强调对实体的运用。人看不见的地方有很多东西，用的程度不同，需要审视的态度也不同。高级的用法是心的直觉。</p>
+</blockquote>
+
+        <h3 id="虚邪贼风"   >
+          <a href="#虚邪贼风" class="heading-link"><i class="fas fa-link"></i></a><a href="#虚邪贼风" class="headerlink" title="虚邪贼风"></a>虚邪贼风</h3>
+      <ul>
+<li><p>上火了，热毒、火毒。</p>
+</li>
+<li><p>春天多风，夏天多火、多暑，秋天多燥，冬天多寒。</p>
+</li>
+<li><p>人造虚邪</p>
+<ul>
+<li>电扇空调，睡觉时卫气收入体内，再吹空调，寒气就会进入。</li>
+<li>穿堂风对卫气的破坏是最强的。</li>
+<li>夏天骑摩托车，毛孔开着，这时候兜风邪气趁虚而入。</li>
+</ul>
+</li>
+<li><p>贼风是什么？</p>
+<ul>
+<li>不注意的风，慢慢地渗入体内。</li>
+<li>不合时宜的风，反季节的风。</li>
+</ul>
+</li>
+<li><p>寒从足底起</p>
+<ul>
+<li>本来是身体内部的阳气出来驱赶</li>
+<li>寒气进来，脚冷，肩背腰痛，脖子痛。</li>
+</ul>
+</li>
+<li><p>抽火</p>
+<ul>
+<li>上火喝凉茶；或因势利导挑动，让他发出去。</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="恬淡虚无"   >
+          <a href="#恬淡虚无" class="heading-link"><i class="fas fa-link"></i></a><a href="#恬淡虚无" class="headerlink" title="恬淡虚无"></a>恬淡虚无</h3>
+      <ul>
+<li>怒则气上，脸红脖子粗；恐则气下，心到嗓子眼了，呼吸不畅。</li>
+<li>心里一紧， 肛门和尿道就松了，所以有人惊恐后会吓得屁滚尿流。</li>
+<li>思则气结，吃不下饭，肠胃不蠕动。</li>
+<li>喜则气缓，收假后上班效率极低，为什么？因为气缓了，一下子松了，提不起气来。</li>
+<li>悲则气消，和某个倾注感情的物体或人分开、分离。</li>
+</ul>
+<blockquote>
+<p>如果你本来生气了，一口气上来，但你又把它压了下去，长此以往，你会怎么样？开始它是个念头、情绪，是无形的；接着它<strong>郁积成了一股能量</strong>，还是无形的，但它已经<strong>从无变成了有</strong>；时间再长，就会逐渐形成有形的物质。 我们说这个人长了肿瘤，或是良性，或是恶性，大家想想，有形的物质最早是什么？就是<strong>闷在心里的一口气</strong>。</p>
+</blockquote>
+
+        <h3 id="怎么导出邪气？"   >
+          <a href="#怎么导出邪气？" class="heading-link"><i class="fas fa-link"></i></a><a href="#怎么导出邪气？" class="headerlink" title="怎么导出邪气？"></a>怎么导出邪气？</h3>
+      <ul>
+<li>宽以待人，严于律己。（心态上疏通）</li>
+<li>用药导出邪气。（物质上调理）</li>
+</ul>
+<blockquote>
+<p>中医认为，如果你的心气是足的，而且<strong>心肠又足够热</strong>，你才会有爱心。这种爱心第一体现在你爱自己；有额外的能量后会爱你的家人，再有额外的能量你会爱周围的团体；再往大了说，爱这个社会，爱这个国家。这是有顺序的，这才是真爱。</p>
+<p>恨是一种什么样的感觉？恨里有“艮”，艮主土石，它是有形物质的积累，就是<strong>耿耿于怀</strong>。我们说心里有块垒堵着，放不下去，说明这种情绪、感情的伤害已经在你的心里<strong>结成了有形的物质</strong>，你想劝解也没有用。怎么办？把这些硬结化掉后，才能把恨化解。</p>
+<p>说到“情”字，问世间情为何物？情是<strong>信息和能量的交换</strong>，它要交换就应该有对应的人，那个人没了，情不就断了吗？对应的人已经不在的时候，我们还在不断地释放，这叫单相思“丢魂”，最后就是黯然神伤，伤到自己。</p>
+</blockquote>
+<ul>
+<li>恬惔不是没有欲望，而是没有太多、太强的欲望，要到一个平衡点。</li>
+<li>虚无是一种生活境界，古人讲“虚其心，实其腹，弱其志，强其骨”，就是把自己的内心放到一种什么都没有的虚空状态， 让自己的思想变得很灵敏、空灵，然后就能体会到自然的变化，听到宇宙的声音，达到悟道和成佛的境界。</li>
+</ul>
+
+        <h3 id="真气从之"   >
+          <a href="#真气从之" class="heading-link"><i class="fas fa-link"></i></a><a href="#真气从之" class="headerlink" title="真气从之"></a>真气从之</h3>
+      <blockquote>
+<p>做到了，就会感觉自己的气血运行不受外边的贼风或情绪的影响。这样<strong>气血就会按照它本来的运行规律</strong>运行，这就叫“真气从之”。</p>
+<p>当我们处在“恬惔虚无”的状态时，先天赋予的真气就能指挥神去运作。“从之”就是从神，即被心包保护得好好的君主，就是你的心神。<strong>真宰</strong>会指挥若定，运筹帷幄之中，决胜千里之外。这时气血运行完全是按照神韵的节拍走，你会活得很舒心。推动真气运动的东西叫“元神”。</p>
+</blockquote>
+
+        <h3 id="打开心胸"   >
+          <a href="#打开心胸" class="heading-link"><i class="fas fa-link"></i></a><a href="#打开心胸" class="headerlink" title="打开心胸"></a>打开心胸</h3>
+      <blockquote>
+<p>中医讲情绪是动心的开始，它由心包来负责。心神是被心包保护着的，如果你的心包功能强，感情就被保护得很好，你不容易被伤害，即便受到伤害，自愈能力也很强。 </p>
+<p>有什么办法让自己的心包功能变得强大点儿呢？大家见过大猩猩没有？大猩猩在气急败坏的时候，有一个招牌动作——捶胸顿足。它实际上在拍打身体上的一个穴位，正好是心包的代表穴——膻中穴，我们中医称之为募穴。</p>
+<p>这个穴位在哪里？两个乳头的正中间。 如果你<strong>平时按膻中穴觉得疼，肯定有不良的情绪和感情郁结在里面没有发泄出来，</strong>怎么办？你还不如学学大猩猩<strong>捶胸顿足</strong>，让它散开。这些不良的情绪和感情散开后，你会觉得原来气短、老唉声叹气的症状一 下子都给化解了。你可以不找大夫吃药，自己就能把它化解掉。</p>
+<p>当你碰到一件内心不能接受的事情时，是不是有种令人作呕 的感觉？其实<strong>令人作呕是一种身心的表现</strong>，不仅是胃，还有内心的不认同。那么按压内关穴就能平复我们的内心，增强了我们的抵御能力。 中国古代的女性都有<strong>戴玉镯子</strong>的习惯，戴玉镯子的位置在哪里？大概就在内关穴。</p>
+</blockquote>
+
+        <h3 id="精神内守"   >
+          <a href="#精神内守" class="heading-link"><i class="fas fa-link"></i></a><a href="#精神内守" class="headerlink" title="精神内守"></a>精神内守</h3>
+      <blockquote>
+<p>当我们的身体长出癌细胞或肿瘤细胞时，如果“真气从之”， 它就会把气血运过来，把癌细胞或肿瘤细胞干掉。可是，如果我们疯狂地消耗元气去干别的事，它就<strong>顾不上</strong>了。</p>
+</blockquote>
+<ul>
+<li><p>心神不宁的人最爱生病</p>
+</li>
+<li><p>寧，身体健康的状态是心回到心包里，踏踏实实待着，享受它的气血供养。大程子说，<strong>心在腔子里</strong>。</p>
+</li>
+<li><p>正常情况下，人体白天心藏神，晚上肝藏魂。可很多人的心神是散乱的，附着在了外界。 很多失眠的人晚上睁着眼睛睡不着觉，他在想什么？他把联合国所有国家的事情考虑一遍以后，天亮了。他的神在哪儿？我们经常说，<strong>志发于四野</strong>，他的心思都在外面散乱着。</p>
+</li>
+<li><p>现代人不懂得精诚所至，金石为开，不懂得集中自己的注意力，或者不能够集中自己的注意力完成一件事，往往他们的精神是同时分散在很多事情上。</p>
+<blockquote>
+<p>有人在做事的时候，手里摇着笔，嘴里嚼着口香糖，耳朵上挂个耳机，眼睛还瞄一眼电视，手敲着键盘， 腿不时得哆嗦几下…… <strong>你说他在干什么</strong>？看这个状态，我们知道这个人的<strong>神是散的、乱的</strong>，最终的结果叫“狗揽八泡屎”，他一个也得不到。</p>
+</blockquote>
+</li>
+</ul>
+
+        <h3 id="休息"   >
+          <a href="#休息" class="heading-link"><i class="fas fa-link"></i></a><a href="#休息" class="headerlink" title="休息"></a>休息</h3>
+      <ul>
+<li>破了才要补，锅是好的才能加，益。</li>
+<li>多数人积攒了很多糟粕，需要把敌人先赶走，然后再去补。</li>
+<li>总觉得自己不够强大，需要额外加东西，却没有想到精神内守的力量和人的自我修复功能的强大。</li>
+<li>息<ul>
+<li>第一，是<strong>呼和吸的中间，健康人是有停顿的</strong>，不健康的人是上气不接下气，没有停顿。你想好好睡觉，就得先调呼吸，<strong>把呼和吸中间的停顿调出来</strong>， 这样你就“息”了。 </li>
+<li>第二，我们的心脏也是两个心房、两个心室交替工作的。一个在泵血的时候，另一个是要稍微停顿的。所以，呼吸之间的停顿和心脏搏动之间的停顿调不出来，人就睡不着觉。</li>
+</ul>
+</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/12/26/2%E8%87%AA%E6%89%BE%E7%97%85%E7%97%9B/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-12-26</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-12-31</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h4 id="虚其心，实其腹，弱其志，强其骨"   >
+          <a href="#虚其心，实其腹，弱其志，强其骨" class="heading-link"><i class="fas fa-link"></i></a><a href="#虚其心，实其腹，弱其志，强其骨" class="headerlink" title="虚其心，实其腹，弱其志，强其骨"></a>虚其心，实其腹，弱其志，强其骨</h4>
+      
+        <h2 id="经文"   >
+          <a href="#经文" class="heading-link"><i class="fas fa-link"></i></a><a href="#经文" class="headerlink" title="经文"></a>经文</h2>
+      <p>今时之人不然也，以酒为浆，以妄为常，醉以入房，<strong>以欲竭其精，以耗散其真</strong>，不知持满，不时御神，<strong>务快其心</strong>，逆于生乐，起居无节，故半百而衰也。</p>
+<ol>
+<li><p>喝酒</p>
+<ol>
+<li>不建议大家喝啤酒，你用啤酒炖鸡、炖鸭，倒是赞成</li>
+<li>关于那些寒性的酒，我们不要碰，啤酒、葡萄酒少喝点儿可以，助助兴。烈性的白酒要少碰，有应酬可以稍微喝点儿。</li>
+<li>喝酒的最高境界是什么呢？饮酒不醉为最高，喝酒喝到鼓舞一下兴致、微醺的时候打住，这叫“食饮有节”。</li>
+<li>像喝水一样喝酒，于是平时不敢干的事敢干 ——“以妄为常”。接下来是疯和狂——“登高而歌， 弃衣而走”，老子天下第一。</li>
+</ol>
+</li>
+<li><p>现在的人需要的不多，想要的多。</p>
+<ol>
+<li>总觉得别人成功，别人好，争着做别人。</li>
+<li>没几个人有自知之明，想要做自己的。</li>
+</ol>
+</li>
+<li><p>悠着点儿用精</p>
+<ol>
+<li>说精髓，肾主骨，骨生髓， 肾藏精，肾把精藏藏在骨子里。</li>
+<li>还有一部分精气存在皮下脂肪里，抽脂是抑郁症的前奏。</li>
+<li>性成熟后，老天会给你一种推动力，让你很有快感地去为了繁衍后代而死掉。（动物界有螳螂，大马哈鱼……）</li>
+<li>精狭义是指生殖器官的精液，看似只有一点，但恢复圆满要花费巨大的能量。</li>
+<li>各种漏精（气）<ol>
+<li>出盗汗。</li>
+<li>喝酒过度用肾来解毒。</li>
+<li>健身房过度出汗。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>自己够强才去献血，一滴精十滴血，精血是同源的。</p>
+</li>
+<li><p>和老天对着干就是找倒霉</p>
+<ol>
+<li>很多女性认为只要还来月经，说明自己还年轻。吃雌激素片，人为来月经当然是反自然。从中医来说，是用一种刺激的方法，让人透支自己的精髓再化成血，然后再流出来，即透支以后的生活来维持现状。结果呢？诱发乳腺癌。</li>
+<li>天道是不以人的意志为转移的，你改变不了它。 人所能做的是根据天道左右自己的思想行为，如果你的思想行为跟天道、地理变化<code>相适应</code>，这就叫“有德”。</li>
+<li>现在所谓的“喝牛奶补钙”更多是一种噱头。我们看一下它是不是自然的食品。<strong>动物长大了还回去跟它妈那喝奶吗</strong>？只有人，而且只有<strong>无知的人</strong>才会这么干。</li>
+</ol>
+</li>
+<li><p>该吃多少肉，该吃多少粮食</p>
+<ol>
+<li>看恐龙化石，怎么判断是草食还是肉食？看牙齿。肉食恐龙都是尖锐的犬齿，草食恐龙全是臼齿（槽牙）。数数自己有几颗尖牙利齿，磨碎种子食物的槽牙有多少，比例大概是多少。</li>
+<li>没有金刚钻别揽瓷器活。</li>
+</ol>
+</li>
+<li><p>科学</p>
+<ol>
+<li><p>现代人说吃早饭有益健康，不吃早饭容易得胆结石。没有一个人 问，<strong>您早上起来饥吗？</strong>饿吗？想吃东西吗？昨天晚上吃的东西还没消化，打个嗝还是昨天吃饭的味，老婆就把牛奶鸡蛋端上来，还说这个东西科学，不吃不行。</p>
+</li>
+<li><p>第一句话：<code>五谷为养</code>。养的是您的精。第二句话：<code>五畜为益</code>。什么叫“益”？锦上添花。您在吃五谷的基础上加点儿肉食，别颠倒了。这是对我们中国人说的。第三句话：五菜为充。吃多了肉，吃些蔬菜疏导一下。没有五谷、没有肉吃的时候，权且充饥。最后 一句话：五果为助。</p>
+</li>
+<li><p>我的患者中，冬泳诱发心脏病的，冬泳导致自己长一身黑痦子的， 冬泳导致自己得抑郁症的例子，比比皆是。所以，如果你有长期养成的习惯，而且<strong>通过洗凉水澡能把自己的阳气激发出来</strong>，把寒气驱走，而不是把寒气留在体内，那么您适合冬泳；否则不要尝试，做个平常人就好。</p>
+</li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>持满：让肾精总是保持一种充盈状态而不是枯竭。</p>
+</blockquote>
+<ol start="8">
+<li><p>退化：学会了利用工具就丧失了本能。</p>
+<ol>
+<li>有手机了，人基本记不住几个电话号码。</li>
+<li>地震来之前，动物有反应，人没反应。</li>
+<li>甲骨文、青铜器，到各种玉器的雕刻，还有秦汉以前精美的文章，你就会发现，其实人的本能在退化。</li>
+<li>只能看到满目的人造灯光而看不到星星的时候，人离自然远了。</li>
+<li>回归天真、纯朴、原始的状态，让我们对天地的感知更敏感。</li>
+</ol>
+</li>
+<li><p>养神</p>
+<ol>
+<li>跟着<code>自然的节奏</code>去做事。</li>
+<li>中医意识到情绪对身体节奏的影响，它说怒则气上，你一生气，气血就往上涌，怒发冲冠，脸红脖子粗；恐则气下，人受到惊吓，屁滚尿流的；惊则气乱，喜则气缓，思则气结，这些情绪其实都是扰乱了你的内心。</li>
+<li>中医认为，人生不是痛苦的，从出生到生长、发育、死亡，其实是一种自然的过程，<strong>除非</strong>你违反了自然规律，有了病痛，才会觉得痛苦。</li>
+</ol>
+</li>
+</ol>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/12/26/1%E5%85%BB%E7%94%9F%E4%B9%8B%E9%81%93/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-12-26</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-12-31</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="道法术器"   >
+          <a href="#道法术器" class="heading-link"><i class="fas fa-link"></i></a><a href="#道法术器" class="headerlink" title="道法术器"></a>道法术器</h1>
+      
+        <h2 id="原文"   >
+          <a href="#原文" class="heading-link"><i class="fas fa-link"></i></a><a href="#原文" class="headerlink" title="原文"></a>原文</h2>
+      <p>《黄帝内经·素问》第一《上古天真论》</p>
+<p>乃问于天师曰：余闻上古之人，春秋皆度百岁，而<strong>动作</strong>不衰；今时之人，年半百而动作皆衰者，时世异耶？人将失之耶？ </p>
+<p>岐伯对曰：上古之人，其知道者，<strong>法于阴阳，和于术数， 食饮有节，起居有常，不妄作劳</strong>，故能形与神俱，而尽终其天年，度百岁乃去。</p>
+<blockquote>
+<p>动作，动是动脚，作是五指张开。力由足底生，踵息。</p>
+<p>身体，身指的是躯干，强调整体，体是肢体、是部分。</p>
+</blockquote>
+<ol>
+<li><p>要顺应人固有的自然本性，根本方向要搞清楚。</p>
+</li>
+<li><p>站桩不是部分肢体动，而是内在肠胃动，作为一个整体的运转。</p>
+</li>
+<li><p>根据太阳、月亮的变化走，就是合法。</p>
+<ol>
+<li>阳历，即二十四节气，指导农耕。<ol>
+<li>五天为一段，动植物有一个变化</li>
+<li>十五天为一气，两个气是一节，九十天是一季</li>
+</ol>
+</li>
+<li>阴历，根据月亮变化制定，指导中国人的生活，如传统节日。<ol>
+<li>古人发现月亮的阴晴圆缺会对人的情绪、气血有影响</li>
+<li>人的生命生活应当顺应日月星辰的变化</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>和于术数，和是对阴阳的调和</p>
+<ol>
+<li>孤阴不生，孤阳不长。阴阳失调了就要酌情添减。</li>
+<li>术，还指自我调节，平衡不同事情对情感的影响。</li>
+</ol>
+</li>
+<li><p>饮食有节</p>
+<ol>
+<li>节，首先是停顿，给胃部一个消化的过程。<ol>
+<li>吃饭要有节奏，启动有个过程，运行也有节奏。</li>
+</ol>
+</li>
+<li>节，也可指顺应节气时令。<ol>
+<li>少吃或者不吃反季节的东西。</li>
+<li>冬天吃春天的菜，尽给身体一些错误信号。</li>
+<li>秋天吃苹果，放到春天吃，就是人为制造麻烦。</li>
+</ol>
+</li>
+<li>节，可作为节制。<ol>
+<li>健康的小孩到饭点吃饭，之后就不再吃了，是本能保护。</li>
+<li>现在人吃饱了，还一味用辛辣来刺激胃部，给自己制造多余的压力，不是营养，只是堆积垃圾。</li>
+<li>乱喝水<ol>
+<li>形寒冷饮则伤肺，先是胃部受不了，肺胃先关。</li>
+<li>渴了再喝水，一定喝热水，一次喝三口。</li>
+<li>冬天可以适当喝冰水，夏天少喝冷饮，夏天人的气血在体表发散了，这时候胃肠是冷的，人到夏天的时候消化功能是最差的，所以人们有“苦夏”之说。</li>
+<li>生津止渴，喝热水、热茶远远要比那个冰来得快。</li>
+</ol>
+</li>
+<li>根据体质来喝茶<ol>
+<li>茶有温热寒凉之分</li>
+<li>绿茶属于寒，绿茶是为了生长在南方那种炎热潮湿环境中的人准备的，它有苦寒之性，能清心火，有一种清香的味道，能让人微微出点儿汗，而且能利小便。所以，北方人喝绿茶容易闹病。</li>
+<li>温和的是半发酵茶，福建安溪的乌龙茶（铁观音），少喝，浅尝辄止。</li>
+<li>小口喝可以保证最大程度、最快速度被身体 吸收、利用，转化为体液，马上就满口生津。</li>
+<li>北方人喝全发酵茶，红茶；黑茶（普洱茶）助消化。<ol>
+<li>它自身含有的许多酶减轻了胃部吸收的压力</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>起居有常</p>
+<ol>
+<li>固定的起居喝生活规律。</li>
+<li>夜卧早起，必待日光。跟着太阳行事，阴寒无光时不去运动。</li>
+<li>当身体随着日月星辰的变化而变的时候，强迫它去改就会付出更大的能量。该睡不睡没有能补回来的道理，年纪越大，体会越深。</li>
+<li>一年之计在于春，一日之计在于晨。大家试试早睡早起， 早晨写东西、思考问题更有灵感。</li>
+<li>孩子晚上不睡，导致早熟（月经提前），早熟意味着早衰。</li>
+</ol>
+</li>
+<li><p>不要自己作</p>
+<ol>
+<li>回归自然的人在很多人眼里显得很傻。<ol>
+<li>晚上各种丰富娱乐你不享受，去睡觉，不是傻是什么？</li>
+<li>《老子》云：坚强者死之徒，柔弱者生之徒。专气致柔，能如婴儿乎？</li>
+<li>生活在这种光污染、电磁波辐射的现代都市，人们到了晚上兴奋劲来了，想控制这种反动的力量，需要定力。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>不妄劳作</p>
+<ol>
+<li>妄，一个意思是胡乱，拆开是亡和女。<ol>
+<li>过度纵欲，像中世纪的大主教非死在女人大腿之间不可。</li>
+<li>以酒为浆，以妄为常，醉以入房，精神迷乱于性欲中。</li>
+</ol>
+</li>
+<li>劳的繁体字是“勞”，上面是两个火，底下是力。<ol>
+<li>天黑了，还有点着灯，熬的前提得有东西消耗啊。</li>
+<li>加班加点，不睡觉都是人为作劳。</li>
+</ol>
+</li>
+<li>不妄，心里没有过度的欲火</li>
+</ol>
+</li>
+<li><p>形与神俱</p>
+<ol>
+<li>抑郁症，不高兴的背后是身体元气的滞涩或匮乏。</li>
+<li>《说文解字》“神，天神，引出万物者也”，就是说天地万物、日月星辰都是从神那来的。</li>
+<li>元神寄托与肉身，连身体都照顾不好，神怎么能安乐呢？</li>
+</ol>
+</li>
+<li><p>中医治病，讲究因时因地因人制宜</p>
+<ol>
+<li>《四气调神大论》说，“春三月，此谓发陈”。到春天的时候，你要“夜卧早起”，在庭院里散步， 披开束发，以使神志随着生发之气而舒畅。这只是<strong>笼统</strong>地说春天里应该怎么样。</li>
+<li>经络都是活的，在移动和变化。死记穴位就是刻舟求剑。</li>
+<li>大家想一想，文言文是没有标点符号的，这是为什么？当你的思想跟它共振、共鸣的时候，不用标点符号你就懂了。当你还没有达到那种状态的时候只能多读。</li>
+<li>恢复知觉。动物没有上过学，没有念过书，照样活得很自然、很健康，它靠的是<code>先天本能的觉</code>。人有更真切的知识可以继承，放在哪里，却没人要。</li>
+</ol>
+</li>
+</ol>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/12/26/%E4%BA%94%E9%81%93%E5%AE%B6%E7%9A%84%E7%8E%84%E7%90%86%E6%80%A7%E6%A0%BC/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-12-26</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-12-26</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="玄理"   >
+          <a href="#玄理" class="heading-link"><i class="fas fa-link"></i></a><a href="#玄理" class="headerlink" title="玄理"></a>玄理</h1>
+      
+        <h2 id="观念"   >
+          <a href="#观念" class="heading-link"><i class="fas fa-link"></i></a><a href="#观念" class="headerlink" title="观念"></a>观念</h2>
+      <ol>
+<li><p>要回到文化生命的生长过程中，纵向的走一遍，去悟。</p>
+</li>
+<li><p>没有内在生命的礼乐就是造作的，在束缚人；若是从生命发出来的就不是束缚；</p>
+<ol>
+<li>古人心思单纯，元气丰沛，其礼仪不算束缚，而今人元气耗散严重，故成为束缚，如何？</li>
+<li>或不是全部的礼仪都有其内在生命，前面依赖强力的约束，当上层权威丧失，故暴露出其造作的本质。</li>
+<li>自然本身必须借助礼仪来实现吗？礼仪作为形式的外在的，它的根是谁？</li>
+</ol>
+</li>
+<li><p>道家的自然是精神上无所依赖，无所待。</p>
+</li>
+<li><p>无的境界</p>
+<ol>
+<li>动词，对虚伪造作，有所待的否定，是实践的。一切的言论行为好像行云流水那么自然，是需要修炼的。</li>
+<li>尊重他人，先是文字的形式化的<strong>礼</strong>；当人心里没有生机对应这个做法时，其实依靠某种‘矜持’在约束自己按照形式去做。无，就是否定这个知识本身，发现内在生命的理，天然的生而平等所以尊重。</li>
+<li>造作的三层：<ol>
+<li>自然生命的纷驰使。向外找刺激、自我麻醉，使生命像奔向四面八方的马都白白逃失了。</li>
+<li>心理情绪的不舒展。当怒不怒，当断不断……</li>
+<li>意念的造作。自我标榜是真理的思想系统其实是一孔之见，何尝不是在禁锢人心。通过这些孔有点光明，但周围就环绕了无明，只有把它化掉，才全部是明，智慧就代表明。</li>
+</ol>
+</li>
+<li>境界即虚壹而静（荀子解蔽篇），使我们的心灵不黏着固定于任何一个特定的方向上。<ol>
+<li>虚，不被某一方向所闭塞、所占有，是开放的。</li>
+<li>一，纯一无杂，如水长通流，没有复杂的冲突。</li>
+<li>静，即将心灵从现实中超拔出来，浮在上层，如明镜视物，清清楚楚。</li>
+<li>张良。</li>
+</ol>
+</li>
+<li>无限妙用，心灵很灵活，开放，对的道理能不断吸收学习。</li>
+<li>无为而无不为。无为是本（虚壹而静的心灵），无不为是作用，不带功利的做事自然就什么都能做。</li>
+</ol>
+</li>
+<li><p>有生于无的【有】</p>
+<ol>
+<li>等把任何特定方向的黏着化掉了（无），并没有结束，不是让你停留在【抽象的无】里就行了。</li>
+<li>没有造作之后的无，进入没有内容的挂空状态，可以用【纯粹的普遍性】描述。</li>
+<li>【有】，当【纯粹的普遍性】接触到【具体内容】。有就是无限妙用、虚一而静的心境的<strong>矢向性</strong>，用道德经的话讲就是徼向性。</li>
+<li>停在无有任一面，道的具体性就没有了，就不能恢复显出道创生天地万物的妙用。</li>
+</ol>
+</li>
+<li><p>道随时能无，随时又有徼向性，这就是道性。</p>
+<ol>
+<li>有不要脱离无，它发自无的无限妙用，发出来又化掉而回到无，总是个圆圈在转。不要再拆开来分别地讲无讲有，而是将这个圆圈整个来看，说无又是有，说有又是无。这个圆周之转就是「玄」，道德经「玄之又玄，众妙之门」的玄。</li>
+</ol>
+</li>
+<li><p>讲创造就要和对象直接间接<strong>任何的牵连</strong>统统没有，也可以发一个徼向性，才叫创造。</p>
+<ol>
+<li><strong>创造一个典故</strong>，无的心境不玄妙，有的出现，创造的开始倒是微妙，什么是最合适呢？</li>
+<li></li>
+</ol>
+</li>
+<li><p>玄是个圆圈，说它无，它又无而不无就是有；说它有，它又有而不有就是无，因此是辩证的(dialectical）。凡辩证的都是玄，就深。</p>
+</li>
+</ol>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/12/26/%E5%9B%9B%E5%84%92%E5%AE%B6%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E6%A0%BC/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-12-26</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-12-26</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="儒家"   >
+          <a href="#儒家" class="heading-link"><i class="fas fa-link"></i></a><a href="#儒家" class="headerlink" title="儒家"></a>儒家</h1>
+      
+        <h2 id="1-态度"   >
+          <a href="#1-态度" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-态度" class="headerlink" title="1 态度"></a>1 态度</h2>
+      <ol>
+<li>当成一个连贯的系统来看，关注他的主要问题、观念。</li>
+<li>儒家的道理太平正，无奇特象，而现在的人好偏邪，博人眼球，反而讲不好。</li>
+<li>儒家并不是解决特定问题的学问，研究具体问题还需要具体的知识，不能说有阳明的致良知就把经济问题解决了，这是瞎说。</li>
+<li>理解其思想有三点：一是文字，二是逻辑，三是insight（智慧）；光理解文字，见识不够也很难解对。</li>
+<li>对于存在、宇宙论这一套圣人是不讲的，没兴趣，但他的insight可以透射到存在那个地方。</li>
+<li>历来无论智慧多高的人也没有人敢轻视论语，就是佛教的那些大和尚也不敢轻视论语。</li>
+<li>道德是从私心、习气、罪过中解放人、开放人的必然选择。</li>
+</ol>
+
+        <h2 id="2-观点"   >
+          <a href="#2-观点" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-观点" class="headerlink" title="2 观点"></a>2 观点</h2>
+      <ol>
+<li><p>以谁为本体？</p>
+<blockquote>
+<p>道德为根基而有宇宙，有神。神是实现了最高善、最完整道德的存在。宇宙是建立在道德运转上的空间体。故言宇宙秩序就是道德秩序。</p>
+</blockquote>
+</li>
+<li><p>儒家的本体</p>
+<blockquote>
+<p>儒家有一个天来负责存在，孔子论仁，孟子说性善都是和天通而为一。仁，一方面是客观（满足普遍性和必然性）的理、道（善的本性），另一方面也是一个自觉心，你的心安不安。</p>
+<p>善性要借助慎独的功夫来表达，慎独与诚意同义，诚本身就是一种德性，无声无臭独知时，此是乾坤万有基。</p>
+<p>在只有自己知道的地方落实<strong>诚</strong>的要求。　</p>
+</blockquote>
+</li>
+<li><p>观天地生物气象。</p>
+<blockquote>
+<p>这个「生物」应当是顺着中庸所说的「天地之道可一言而尽也：其为物不贰则其生物不测」之「生物」来了解，「生物」即是创生万物，「生」是动词。</p>
+</blockquote>
+</li>
+<li><p>易传讲「穷神知化」（系辞下）</p>
+<p>「神也者，妙万物而为言者也。」（说卦）</p>
+<p>「直其正也，方其义也。君子敬以直内，义以方外，敬义立而德不孤。直方大。不习，无不利。」</p>
+<blockquote>
+<p>说人有神气、神采，都是物质的气，是形而下。儒家易传讲「神」，它是个形而上的。它之所以为形而上的，是靠什么观念来定住呢？是通过「诚」。中庸、易传都讲诚，诚是一种德性，是属于道德的。宇宙秩序即道德秩序。</p>
+<p>子思所谓“至诚如神，可以前知”者也，然子思谓“如神”，谓“可以前知”，犹二而言之，是盖推言思诚者之功效，是犹为不能先觉者说也。若就至诚而言，则至诚之妙用，即谓之“神”，不必言“如神”，至诚则“无知而无不知”，不必言“可以前知”矣。（传习录）</p>
+</blockquote>
+</li>
+</ol>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/12/26/%E4%B8%83%E9%81%93%E4%B9%8B%E4%BD%9C%E7%94%A8%E7%9A%84%E8%A1%A8%E8%B1%A1/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-12-26</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-12-08</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="实有与运用"   >
+          <a href="#实有与运用" class="heading-link"><i class="fas fa-link"></i></a><a href="#实有与运用" class="headerlink" title="实有与运用"></a>实有与运用</h1>
+      
+        <h2 id="1-字词的意思"   >
+          <a href="#1-字词的意思" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-字词的意思" class="headerlink" title="1 字词的意思"></a>1 字词的意思</h2>
+      <ul>
+<li>境：是指实际的物质对象，被认识感知的对象。</li>
+<li>界：以某种原因划定范围，既有因又有果。</li>
+<li>实有：文字<strong>知识</strong>，正面可以描述的实际对象，what问题。</li>
+<li>作用：回答怎么才能<strong>用好实有</strong>，对应着当下的<strong>智慧</strong>。</li>
+<li>心境：心对于物质对象认知的程度，</li>
+<li>主观：借助感性和知性的实践得到的不确定的看法。</li>
+<li>客观：经得起科学检验的事实，确定且正确的描述。</li>
+<li>境界：主观上的心境不断修养，所认知的东西都<strong>往上升</strong>。</li>
+<li>实践：在解决问题时保持观察思考来增进对真理的认识。</li>
+<li>价值：有用无用，是非好恶的判断或衡量。</li>
+<li>诡辞：辩证的跳出对实有名相的线性分析，直指用法。</li>
+</ul>
+
+        <h2 id="2-道理的说明"   >
+          <a href="#2-道理的说明" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-道理的说明" class="headerlink" title="2 道理的说明"></a>2 道理的说明</h2>
+      <ul>
+<li>故常无欲以观其妙，常有欲以观其徼。</li>
+</ul>
+<blockquote>
+<p>不正面定义什么是道，而是从主观心境出发，在用的角度来描述，如无欲，没有既定目标、实体概念时，看事物运转的特性；有欲，有确定问题时，看怎么运用特性，直到发现该特性适用的边界。</p>
+</blockquote>
+<ul>
+<li>大道废，有仁义。</li>
+</ul>
+<blockquote>
+<p>没有以道的内涵来运作的仁义，并未以最好的方式表现，仍只是分析层面上的实有层次的知识。知识不能解决问题，运用知识的道才能解决问题。</p>
+</blockquote>
+<ul>
+<li>无有作好，无有作恶。</li>
+</ul>
+<blockquote>
+<p>好与恶是实有，即从正面分析出发加以定义的知识。作，就是造作。无有，对造作进行<strong>否定</strong>，点明要<strong>不带人为私心的做</strong>。</p>
+</blockquote>
+<ul>
+<li>后其身而身先，<strong>忘</strong>其身而身存。</li>
+</ul>
+<blockquote>
+<p>想要在前面做事，先把自己放到幕后。象棋的将帅不去主动冲锋陷阵。想保全身体先要忘记它，不去过分牵挂，身体自然运转，反而没有问题。</p>
+</blockquote>
+<ul>
+<li>鱼相忘于江湖，人相忘于道术。</li>
+</ul>
+<blockquote>
+<p>不麻烦他人，各自安好。人相忘于道术，才能够得其天年，没有一切恐惧。</p>
+<p>要从作用层上看，忘掉那些造作，把那些造作、不自然的东西，都给化掉。化掉而显得就是空荡荡，就是虚一而静，什么都没得，这个就是虚，就是无。</p>
+</blockquote>
+<ul>
+<li><p>天何言哉，四时行焉，百物生焉，天何言哉。</p>
+<p>予欲无言。</p>
+<p>不言而信，存乎德行。</p>
+<p>易无思也，无为也，寂然不动，感而遂通天下之故。</p>
+</li>
+</ul>
+<blockquote>
+<p>对现有描述如言、为等名相的否定，指出道的<strong>运用</strong>是以无为本体的。好比镜子，老是执著在镜子上有什么，而不是照的作用本身。灯是光之体，光是灯之用，注意力在灯上，就错过光的运用了。</p>
+</blockquote>
+<ul>
+<li>天地之常，以其心普万物而无心</li>
+</ul>
+<blockquote>
+<p>「天地之常」，天地的常度，「以其心」，肯定心，这是实有层，并不是没有心。</p>
+<p>「普万物而无心」，这就是作用层，「而无心」之无就是「无有作好、无有作恶」那个「无」。这个「无心」并不是存在上的否定，这是<strong>作用上的否定</strong>。作用上的否定就是庄子所说的「忘」，就是老子所说的「绝」。</p>
+<p>「以其心」，天地有心，复其见天地之心，这是正面说的实有层上的话。但是天地之心「普万物而无心」，它表现心的方式，是以无心的方式表现，这是作用上的话，把<strong>造作</strong>去掉。</p>
+</blockquote>
+<ul>
+<li>圣人之常，以其情顺万事而无情。</li>
+</ul>
+<blockquote>
+<p>圣人也有情，「圣人之常，以其情顺万事而无情」。圣人有情而不累于情，也就是无情之情。「以其情顺万事而无情」，无情是作用层上的话，这里边也有两层。</p>
+</blockquote>
+<ul>
+<li>有心俱是实，无心俱是幻。有心俱是幻，无心俱是实。</li>
+</ul>
+<blockquote>
+<p>第一句，从是实有上讲，从良知、真宰出发的，有根的直觉才是真实。第二句，从作用上讲，凡是人为的、带有私心的行为都是虚幻。</p>
+</blockquote>
+
+        <h2 id="3-逻辑的辩证"   >
+          <a href="#3-逻辑的辩证" class="heading-link"><i class="fas fa-link"></i></a><a href="#3-逻辑的辩证" class="headerlink" title="3 逻辑的辩证"></a>3 逻辑的辩证</h2>
+      <p>可以勉强界定为实践所达至的主观心境（心灵状态）。这心境是依我们的某方式（例如儒道或佛）下的实践所达至的如何样的心灵状态。依这心灵状态可以引发一种「观看」或「知见」（vision）。</p>
+<p>境界形态的形上学就是依观看或知见之路讲形上学（metaphysics in the line of vision）。我们依实践而有观看或知见；依这观看或知见，我们对于世界有一个看法或说明。这个看法所看的世界，或这个说明所明的世界，不是平常所说的既成的事实世界（如科学所说的世界），而是依我们的实践所观看的世界。这样所看的世界有升进，而依实践路数之不同而亦有异趣，而既成的事实世界则一定而不可移，此则名曰定性世界。</p>
+<p>而若此定性世界是康德意义的现象，则现象毕竟亦是对应我们的感性与知性而为现象，因此，它为定性世界是依我们的<strong>定性感性与定性知性</strong>而为定性世界，上帝原不创造现象（依康德）；而若我们的感性与知性不是定性的，而是可转的（例如转识成智），其为可转是依人不是定性众生，即不是依人类学而看的人，而为可转，则现象之为定性世界亦是可定可不定的，可使之有方可使之无。</p>
+<p>而所谓有升进有异趣的世界则都属于价值层的，属于实践方面之精神价值的；而若在此实践方面的精神价值之最后归趣总是定在自由自在，则有升进有异趣的世界总归是一，虽有升进而亦有终极之定，虽有异趣而亦有同归之同，而此世界中的万物即是「物之在其自己」之物，此则为终极地决定者，亦即是绝对的真实者或存在者，而不是那可使之有亦可使之无的现象。依此，普通所谓定者实是不定，而依上说的观看或知见而来的普通视之为主观而不定者，终极地言之，实是最定者，最客观者，绝对的客观者──亦是绝对的主观者──主客观是一者。</p>
+<blockquote>
+<p>简单理解：石头所以是不变的存在，是因为人定性的感知，如硬的客观存在。若人的感知<strong>可转</strong>，那石头也会变。实践修炼的主观心境看似不确定，最终的最终会上升到一个确定的地方，如逍遥。好比说生命一直在变，但日日新的生机（某种追求）是确定的。</p>
+</blockquote>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/12/26/%E4%BF%AE%E8%BA%AB%E7%AC%AC%E4%BA%8C/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-12-26</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-12-14</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="修身第二"   >
+          <a href="#修身第二" class="heading-link"><i class="fas fa-link"></i></a><a href="#修身第二" class="headerlink" title="修身第二"></a>修身第二</h1>
+      
+        <h2 id="1-具体的礼仪"   >
+          <a href="#1-具体的礼仪" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-具体的礼仪" class="headerlink" title="1 具体的礼仪"></a>1 具体的礼仪</h2>
+      <ol>
+<li>见善，修然必以自存也；见不善，愀然必以自省也；善在身，介然必以自好也；不善在身，菑然必以自恶也。</li>
+<li>非我而当者，吾师也；是我而当者，吾友也；谄谀我者，吾贼也。</li>
+<li>身劳而心安，为之；利少而义多，为之。</li>
+<li>士君子不为贫穷怠乎道。</li>
+<li>体恭敬而心<strong>忠信</strong>，术礼义而情<strong>爱人</strong>。</li>
+<li>劳苦之事则争先，饶乐之事则能让，端悫诚信，拘守而详。</li>
+<li>倚魁（奇怪）之行，非不难也，然而君子不行，止之也。</li>
+<li>跬步而不休，跛鳖千里；累土而<strong>不辍</strong>，丘山崇成。</li>
+<li>道虽迩，不行不至；事虽小，不为不成。其为人也多暇日者（太闲），其出人不远矣。</li>
+<li>好法而行，士也；笃志而体（一定要做到），君子也；齐明而不竭（无所不明），圣人也。</li>
+<li>不使孤陋无知的人困窘；暗中帮助无力报答的人。</li>
+<li>君子之求利也略（有就行），其远害也早（远见），其避辱也惧（谨慎小心），其行道理也勇（一定做到）。</li>
+<li>无有作好，遵王之道；无有作恶，遵王之路。此言君子之能以公义胜私欲也。</li>
+<li>一些特质：<ol>
+<li>敬奉自然而遵循规律</li>
+<li>敬畏礼仪而有所节制</li>
+<li>明智通达而触类旁通</li>
+<li>端正笃诚而遵守法度</li>
+<li>恭敬而不放纵</li>
+<li>戒慎而整治自己</li>
+<li>平和做事，冷静应对</li>
+<li>文雅而明智</li>
+<li>自我约束而明察事理</li>
+<li>坚定刚强</li>
+<li>宽宏大量</li>
+</ol>
+</li>
+<li>应该学习：<ol>
+<li>从善意出发引导别人。</li>
+<li>是就是，非就是非。</li>
+<li>君子如响矣，不轻易乱说。</li>
+<li>进退有个定规的度。</li>
+<li>制定措施简少而有条理，<strong>简约</strong>而有效。</li>
+<li>多听多见，开阔视野。</li>
+<li><strong>做事写清楚，进展心中有数。</strong></li>
+<li>走路时候恭恭敬敬，与人对视先低下头。</li>
+<li>顺从兄长，勤奋好学。</li>
+<li>体貌恭敬，内心诚实。</li>
+<li>实践合理的生活准则，即使安逸，精神不懈怠、不散漫。</li>
+<li>根据道义屈伸进退，随机应变。</li>
+</ol>
+</li>
+</ol>
+</div></div></article></section><nav class="paginator"><div class="paginator-inner"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/lianq.png" alt="avatar"></div><p class="sidebar-ov-author__text">刚乾日新</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">29</div><div class="sidebar-ov-state-item__name">归档</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2023</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>一诚</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.8.0"></script><script src="/js/stun-boot.js?v=2.8.0"></script><script src="/js/scroll.js?v=2.8.0"></script><script src="/js/header.js?v=2.8.0"></script><script src="/js/sidebar.js?v=2.8.0"></script></body></html>
